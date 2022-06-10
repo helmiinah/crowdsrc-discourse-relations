@@ -159,7 +159,7 @@ class RelationAnnotation(CrowdsourcingTask):
     def __call__(self, input_obj):
 
         # If the class is called, use the __call__() method from the superclass
-        super().__call__(input_obj, verify=True)
+        super().__call__(input_obj)
 
         # When called, return the SegmentationVerification object
         return self
@@ -206,8 +206,11 @@ class RelationAnnotation(CrowdsourcingTask):
         prompt = tb.TextViewV1(content=configuration['interface']['prompt'])
 
         # Set up input field
-        input_field = tb.TextFieldV1(
-            data=tb.OutputData(output_data['str'])
+        input_field = tb.layouts.ColumnsLayoutV1(
+            items=[tb.TextViewV1(content="A"),
+                   tb.TextFieldV1(data=tb.OutputData(output_data['str']), validation=tb.RequiredConditionV1(hint="You must write a description")),
+                   tb.TextViewV1(content="B") 
+            ]
         )
         
         # Set task width limit

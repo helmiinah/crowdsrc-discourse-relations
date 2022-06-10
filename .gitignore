@@ -4,4 +4,3 @@ creds.json
 __pycache__
 tests/
 utils/clean_sandbox.py
-utils/check_skilled_users.py

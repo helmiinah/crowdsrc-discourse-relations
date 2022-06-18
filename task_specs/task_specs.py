@@ -176,7 +176,7 @@ class RelationAnnotation(CrowdsourcingTask):
              A Toloka TaskSpec object.
         """
         # Define expected input and output types for the task
-        expected_i, expected_o = {'url', 'json'}, {'str'}
+        expected_i, expected_o = {'url'}, {'str'}
 
         # Configure Toloka data specifications and check the expected input against configuration
         data_in, data_out, input_data, output_data = check_io(configuration=configuration,
@@ -187,20 +187,10 @@ class RelationAnnotation(CrowdsourcingTask):
         data_in['assignment_id'] = toloka.project.StringSpec(required=False)
 
         # Create the task interface; start by setting up the image segmentation interface
-        img_ui = tb.ImageAnnotationFieldV1(
-
-            # Set up the output data field
-            data=tb.InternalData(path=input_data['json'],
-                                 default=tb.InputData(input_data['json'])),
-
-            # Set up the input data field
-            image=tb.InputData(path=input_data['url']),
-
-            # Set minimum width in pixels
-            min_width=500,
-
-            # Disable annotation interface
-            disabled=True)
+        img_ui = tb.ImageViewV1(url=tb.InputData(input_data['url']),
+                                rotatable=True,
+                                scrollable=True,
+                                ratio=[1, 1])
 
         # Define the text prompt below the segmentation UI
         prompt = tb.TextViewV1(content=configuration['interface']['prompt'])
@@ -210,7 +200,9 @@ class RelationAnnotation(CrowdsourcingTask):
             items=[tb.TextViewV1(content="A"),
                    tb.TextFieldV1(data=tb.OutputData(output_data['str']), validation=tb.RequiredConditionV1(hint="You must write a description")),
                    tb.TextViewV1(content="B") 
-            ]
+            ],
+            ratio=[1,15,1],
+            min_width=50
         )
         
         # Set task width limit

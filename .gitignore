@@ -4,3 +4,4 @@ creds.json
 __pycache__
 tests/
 utils/clean_sandbox.py
+utils/convert_bboxes.py

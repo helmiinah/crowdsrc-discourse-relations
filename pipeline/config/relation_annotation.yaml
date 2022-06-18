@@ -1,9 +1,8 @@
 name: describe_relations
 data:
-  file: data/ai2d_bboxes.tsv
+  file: data/bbox_pairs_5.tsv
   input:
     image: url
-    outlines: json
   output:
     result: str
 interface:
@@ -25,7 +24,7 @@ pool:
     default_overlap_for_new_tasks: 1
     default_overlap_for_new_task_suites: 1
   mixer:
-    real_tasks_count: 2
+    real_tasks_count: 5
     golden_tasks_count: 0
     training_tasks_count: 0
   filter:

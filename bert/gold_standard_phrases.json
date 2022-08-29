@@ -1,0 +1,23 @@
+{
+    "elaboration": "describes",
+    "preparation": "explains",
+    "identification": "names",
+    "class-ascription": "is the class of",
+    "property-ascription": "describes a property of",
+    "sequence": "follows",
+    "cyclic-sequence": "follows",
+    "disjunction": "leads to a different outcome than",
+    "conjunction": "belongs to the same entity as",
+    "connected": "is connected to",
+    "circumstance": "is the explanation of the change represented by",
+    "contrast": "is contrastive of",
+    "restatement": "rephrases",
+    "solutionhood": "is the result of",
+    "list": "is similar to",
+    "non-volitional-result": "is caused by",
+    "non-volitional-cause": "causes",
+    "means": "is the process that initiates change in",
+    "background": "provides background information on",
+    "condition": "is a condition for",
+    "enablement": "enables"
+}

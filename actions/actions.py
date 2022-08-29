@@ -30,6 +30,38 @@ if warn.startswith("None of PyTorch"):
     msg.warn(f"Could not find a working installation of PyTorch or TensorFlow, one of which is "
              f"needed for the crowd-kit aggregators to function. Cancelling pipeline.", exits=1)
 
+
+class Validate:
+
+    def __init__(self, configuration, task):
+        self.conf = read_configuration(configuration)
+        self.name = self.conf['name']
+        self.task = task
+        self.client = self.task.client
+
+    def __call__(self, events: List[AssignmentEvent]) -> None:
+
+        for event in events:
+
+            for i in range(len(event.assignment.tasks)):
+
+                solution = event.assignment.solutions[i].output_values[self.conf['data']['output']]
+
+                valid = validate_answer(solution)
+
+                if valid == False:
+
+                    self.client.reject_assignment(assignment_id=event.assignment.id,
+                                                    public_comment="The answer was either not valid English or a proper phrase.")
+                    msg.warn(f'Rejected assignment {event.assignment.id} with answer "{solution}"')
+
+                else:
+
+                    self.client.accept_assignment(assignment_id=event.assignment.id,
+                                                  public_comment="The answer is valid English and seems to follow instructions.")
+                    msg.good(f'Accepted assignment {event.assignment.id} with answer "{solution}"')
+
+
 class Verify:
     """
     This class defines an action for manually verifying crowdsourcing descriptions using other crowdsourced workers.

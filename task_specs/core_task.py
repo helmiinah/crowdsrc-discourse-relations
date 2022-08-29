@@ -459,18 +459,6 @@ class CrowdsourcingTask:
                         self.pool.filter = set_filter(filters=self.pool.filter,
                                                       new_filters=clients)
 
-                # TODO remove deprecated filters (rating)
-
-                # Check if workers should be filtered based on rating
-                if 'rating' in self.pool_conf['filter'].keys():
-
-                    # Create filter
-                    rating = (toloka.filter.Rating >= self.pool_conf['filter']['rating'])
-
-                    # Check for existing filters and set
-                    self.pool.filter = set_filter(filters=self.pool.filter,
-                                                  new_filters=rating)
-
                 # Check if workers should be filtered based on education
                 if 'education' in self.pool_conf['filter'].keys():
 
@@ -786,6 +774,9 @@ class CrowdsourcingTask:
                                         == toloka.conditions.PoolAccessRevokedReason.RESTRICTION],
                             action=toloka.actions.ChangeOverlap(delta=1, open_pool=True)
                         )
+
+                        # Print status message
+                        msg.good(f'Assignments from banned users will be re-added to the pool.')
 
                 
                 # Set up captcha quality control

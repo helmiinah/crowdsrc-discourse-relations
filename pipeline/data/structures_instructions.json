@@ -1,0 +1,30 @@
+[
+    {
+        "3550.png":{
+            "relation":"preparation",
+            "nucleus":"B0",
+            "satellite":"T10"
+        }
+    },
+    {
+        "2282.png":{
+            "relation":"identification",
+            "nucleus":"B0",
+            "satellite":"T1"
+        }
+    },
+    {
+        "332.png":{
+                "relation": "elaboration", 
+                "nucleus": "B0", 
+                "satellite": "T0"
+        }
+    },
+    {
+        "804.png":{
+            "relation": "class-ascription", 
+            "nucleus": "B0", 
+            "satellite": "T0"
+        }
+    }
+]

@@ -1,7 +1,11 @@
 .idea
 creds.json
+creds_sandbox.json
 .DS_Store
 __pycache__
 tests/
 utils/clean_sandbox.py
 utils/convert_bboxes.py
+utils/check_skilled_users.py
+utils/assignments/
+utils/*.csv

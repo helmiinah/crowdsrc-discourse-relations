@@ -1,0 +1,4 @@
+name: validate_answer
+data:
+  output: result
+source: describe_relations

@@ -13,11 +13,33 @@ import toloka.client as toloka
 import toloka.metrics as metrics
 import traceback
 import json
+import enchant
+import spacy
 
 
 # Set up Printer and TracebackPrinter
 msg = Printer(pretty=True, timestamp=True, hide_animation=True)
 tracep = TracebackPrinter()
+
+# Initiate Pyenchant spellchecker and SpaCy language model
+d = enchant.Dict("en_US")
+model = spacy.load('en_core_web_sm')
+
+
+def validate_answer(result: str) -> bool:
+
+    result = result.lower()
+    phrase = "John " + result + " John"
+    
+    parsed = model(phrase)
+
+    if set([d.check(w) for w in result.split()]) == {True} and len(str(result)) > 1 and set(list(result)) != {"a", "b"}:
+        if [t.pos_ for t in parsed if t.pos_ in ['AUX', 'VERB']]:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def create_tasks(input_obj,

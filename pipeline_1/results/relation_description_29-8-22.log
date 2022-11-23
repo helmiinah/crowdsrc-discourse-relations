@@ -1,0 +1,1833 @@
+(crowdsrc_env) helmiina:~/crowdsrc-rst-structures/pipeline $ python3 run_pipeline.py 
+2022-08-29 15:14:54	✔ Successfully loaded configuration from
+config/relation_annotation.yaml
+2022-08-29 15:14:54	ℹ The unique ID for this object (describe_relations) is 8F029FA5
+2022-08-29 15:14:54	ℹ Using Toloka with requester with ID
+27f3ba5b49b4576123ef0e99455a6f30
+2022-08-29 15:14:54	ℹ Current balance on this account is $496.4830
+2022-08-29 15:14:54	ℹ Creating a new Toloka project ...
+2022-08-29 15:14:55	✔ Successfully created a new project with ID 108303 on Toloka
+2022-08-29 15:14:55	✔ Successfully configured a new main pool
+2022-08-29 15:14:55	ℹ Speed/quality setting: only top 10% of users will have access to pool
+describe_relations
+2022-08-29 15:14:55	ℹ Setting up filters
+2022-08-29 15:14:55	✔ Finished adding filters to the pool
+2022-08-29 15:14:55	ℹ Setting up quality control rules
+2022-08-29 15:14:55	✔ Added quality control rule: ban for 7 days if response time is less
+than 8 seconds for 2 out of 5 tasks
+2022-08-29 15:14:55	✔ Added quality control rule: ban for 7 days if user's CAPTCHA success
+rate is less than 80%. CAPTCHA frequency is set to MEDIUM.
+2022-08-29 15:14:55	✔ Successfully created a new pool with ID 35140438 on Toloka
+2022-08-29 15:14:55	ℹ Loading data from data/bbox_pairs_100.tsv
+2022-08-29 15:14:55	✔ Successfully loaded 100 rows of data from data/bbox_pairs_100.tsv
+2022-08-29 15:14:55	ℹ Creating and adding tasks to pool with ID 35140438
+2022-08-29 15:15:16	✔ Successfully added 100 tasks to pool with ID 35140438
+2022-08-29 15:15:16	✔ Successfully loaded configuration from config/validate.yaml
+2022-08-29 15:15:16	ℹ Creating a task sequence
+2022-08-29 15:15:16	ℹ Printing tasks, inputs and outputs
+
+Name                 Input         Output         Pool ID    Project ID   Pool type
+------------------   -----------   ------------   --------   ----------   ---------
+describe_relations   image (url)   result (str)   35140438   108303       Pool     
+validate_answer      --            --             --         --           Action   
+
+2022-08-29 15:15:16	ℹ Registered an assignments observer for task describe_relations
+(35140438)
+2022-08-29 15:15:16	ℹ Registered a pool status observer for task describe_relations
+(35140438)
+2022-08-29 15:15:16	ℹ Setting up a connection from describe_relations to validate_answer on
+submission
+2022-08-29 15:15:17	ℹ Rejected tasks from pool describe_relations will be re-added to the
+pool
+2022-08-29 15:15:17	ℹ Starting the task sequence
+2022-08-29 15:15:17	ℹ Opened pool with ID 35140438
+2022-08-29 15:15:22	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:15:38	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:15:55	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:16:13	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:16:30	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:16:49	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:17:06	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:17:23	✔ Accepted assignment 0002183356--630cae1293220d47e7b5bab6 with answer
+"Spearmint"
+2022-08-29 15:17:24	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:17:42	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:18:02	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:18:20	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:18:41	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:19:00	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:19:17	✔ Accepted assignment 0002183356--630cae42d317946b2c188d62 with answer
+"names"
+2022-08-29 15:19:23	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:19:48	ℹ Pool describe_relations is now 0% complete ...
+2022-08-29 15:20:05	✔ Accepted assignment 0002183356--630caeba6c7e504027a3e15d with answer
+"names"
+2022-08-29 15:20:06	✔ Accepted assignment 0002183356--630caecf22c8e90d72c78d95 with answer
+"names"
+2022-08-29 15:20:06	ℹ Pool describe_relations is now 1% complete ...
+2022-08-29 15:20:23	⚠ Rejected assignment 0002183356--630caeb0a06b2575d88635ac with answer
+"Me"
+2022-08-29 15:20:33	ℹ Pool describe_relations is now 1% complete ...
+2022-08-29 15:20:49	✔ Accepted assignment 0002183356--630cae49b058a31c8d17afe3 with answer
+"Is included"
+2022-08-29 15:20:50	✔ Accepted assignment 0002183356--630caedda217e87efeccc7e5 with answer
+"names"
+2022-08-29 15:20:52	⚠ Rejected assignment 0002183356--630caf117268a7548cad14c5 with answer
+"class"
+2022-08-29 15:20:56	ℹ Pool describe_relations is now 1% complete ...
+2022-08-29 15:21:12	ℹ Pool describe_relations is now 1% complete ...
+2022-08-29 15:21:29	⚠ Rejected assignment 0002183356--630caf1faf3ebb2727bb9c0c with answer
+"faze"
+2022-08-29 15:21:30	✔ Accepted assignment 0002183356--630caf2f22c8e90d72c792d8 with answer
+"names"
+2022-08-29 15:21:31	✔ Accepted assignment 0002183356--630caf3822c8e90d72c793ab with answer
+"names"
+2022-08-29 15:21:31	ℹ Pool describe_relations is now 2% complete ...
+2022-08-29 15:21:50	ℹ Pool describe_relations is now 2% complete ...
+2022-08-29 15:22:07	✔ Accepted assignment 0002183356--630caf44857d4243e7c76132 with answer
+"names"
+2022-08-29 15:22:08	✔ Accepted assignment 0002183356--630caf4cb5470b3f336a5fdc with answer
+"names"
+2022-08-29 15:22:09	⚠ Rejected assignment 0002183356--630caee516b73f29c214eb37 with answer
+"Tunmy"
+2022-08-29 15:22:10	✔ Accepted assignment 0002183356--630caf5eef591d16ede669bb with answer
+"names"
+2022-08-29 15:22:11	ℹ Pool describe_relations is now 2% complete ...
+2022-08-29 15:22:31	ℹ Pool describe_relations is now 3% complete ...
+2022-08-29 15:22:48	✔ Accepted assignment 0002183356--630caf6bb058a31c8d17c0e4 with answer
+"names"
+2022-08-29 15:22:48	⚠ Rejected assignment 0002183356--630caf6216b73f29c214f2a4 with answer
+"Structure"
+2022-08-29 15:22:49	✔ Accepted assignment 0002183356--630caec96c7e504027a3e20a with answer
+"names"
+2022-08-29 15:22:50	✔ Accepted assignment 0002183356--630cae0cb5470b3f336a5314 with answer
+"names"
+2022-08-29 15:22:51	ℹ Pool describe_relations is now 3% complete ...
+2022-08-29 15:23:09	ℹ Pool describe_relations is now 4% complete ...
+2022-08-29 15:23:27	⚠ Rejected assignment 0002183356--630caf7619eedd4475b30685 with answer
+"хз"
+2022-08-29 15:23:28	⚠ Rejected assignment 0002183356--630caf7e6c7e504027a3ecff with answer
+"Moon sizw"
+2022-08-29 15:23:29	⚠ Rejected assignment 0002183356--630caf0141dc1350f7e8583a with answer
+"пиэдец поджелудочгой железе-не опепабельно."
+2022-08-29 15:23:29	ℹ Pool describe_relations is now 4% complete ...
+2022-08-29 15:23:46	ℹ Pool describe_relations is now 4% complete ...
+2022-08-29 15:24:03	⚠ Rejected assignment 0002183356--630cafa831e5d6109f854871 with answer
+"Tree"
+2022-08-29 15:24:04	✔ Accepted assignment 0002183356--630caf94e2b7aa2ff74e4bcc with answer
+"gives information about"
+2022-08-29 15:24:04	ℹ Pool describe_relations is now 4% complete ...
+2022-08-29 15:24:27	ℹ Pool describe_relations is now 5% complete ...
+2022-08-29 15:24:44	⚠ Rejected assignment 0002183356--630caf73e2b7aa2ff74e4983 with answer
+"description"
+2022-08-29 15:24:45	⚠ Rejected assignment 0002183356--630cafd1ff8f302e2d970ff8 with answer
+"Apple mint"
+2022-08-29 15:24:46	⚠ Rejected assignment 0002183356--630cafeaa1a4ab6317260474 with answer
+"description"
+2022-08-29 15:24:47	⚠ Rejected assignment 0002183356--630cafef7268a7548cad28f1 with answer
+"Mercury"
+2022-08-29 15:24:48	✔ Accepted assignment 0002183356--630cb00093220d47e7b5d08e with answer
+"CM"
+2022-08-29 15:24:48	ℹ Pool describe_relations is now 5% complete ...
+2022-08-29 15:25:07	ℹ Pool describe_relations is now 6% complete ...
+2022-08-29 15:25:24	⚠ Rejected assignment 0002183356--630caffee2b7aa2ff74e5493 with answer
+"class"
+2022-08-29 15:25:26	⚠ Rejected assignment 0002183356--630cb00993220d47e7b5d12a with answer
+"Oblique"
+2022-08-29 15:25:27	⚠ Rejected assignment 0002183356--630cb00d93220d47e7b5d162 with answer
+"description"
+2022-08-29 15:25:28	⚠ Rejected assignment 0002183356--630caff63cd1d43971fd0417 with answer
+"Obilique"
+2022-08-29 15:25:29	⚠ Rejected assignment 0002183356--630cafd406f6833ac24779be with answer
+"The A element is the caption which is represented in the B element, the picture
+of the item."
+2022-08-29 15:25:30	⚠ Rejected assignment 0002183356--630caf567cfaf02096ffc653 with answer
+"The O horizon is the upper layer of the topsoil which is mainly composed of
+organic materials, This layer is rich in organic material and is known as the
+humus layer.,layer is composed of nutrients leached"
+2022-08-29 15:25:31	✔ Accepted assignment 0002183356--630cb01a716307559004c16a with answer
+"names"
+2022-08-29 15:25:32	✔ Accepted assignment 0002183356--630cafe6862f3f043a1f5183 with answer
+"All are the nine planets"
+2022-08-29 15:25:33	✔ Accepted assignment 0002183356--630cb0036c7e504027a3f5d2 with answer
+"Plant is common relationship between them"
+2022-08-29 15:25:35	⚠ Rejected assignment 0002183356--630cb024e09bfb3537b58e31 with answer
+"description"
+2022-08-29 15:25:36	⚠ Rejected assignment 0002183356--630caff441dc1350f7e8658f with answer
+"structure of a plant"
+2022-08-29 15:25:37	ℹ Pool describe_relations is now 8% complete ...
+2022-08-29 15:25:54	✔ Accepted assignment 0002183356--630cb02b7268a7548cad2e5a with answer
+"names"
+2022-08-29 15:25:55	⚠ Rejected assignment 0002183356--630cb0219d444055d690f3da with answer
+"Mercury"
+2022-08-29 15:25:56	✔ Accepted assignment 0002183356--630cafbe7cfaf02096ffc9ab with answer
+"Parts"
+2022-08-29 15:25:57	✔ Accepted assignment 0002183356--630cafd6e2b7aa2ff74e510c with answer
+"is the class of"
+2022-08-29 15:25:59	⚠ Rejected assignment 0002183356--630cafe9fd123c3cf9f06cee with answer
+"Yy"
+2022-08-29 15:26:00	⚠ Rejected assignment 0002183356--630cafd541dc1350f7e863f5 with answer
+"Where microtubules are made for the cytoskeleton"
+2022-08-29 15:26:01	⚠ Rejected assignment 0002183356--630cb029a06b2575d8864d4f with answer
+"Life cycle"
+2022-08-29 15:26:02	⚠ Rejected assignment 0002183356--630cafcca217e87efeccd329 with answer
+"Yah rabba hai is per Ham khel sakte hain"
+2022-08-29 15:26:02	ℹ Pool describe_relations is now 9% complete ...
+2022-08-29 15:26:20	ℹ Pool describe_relations is now 9% complete ...
+2022-08-29 15:26:37	⚠ Rejected assignment 0002183356--630cb035e2b7aa2ff74e5871 with answer
+"Thalamus"
+2022-08-29 15:26:38	⚠ Rejected assignment 0002183356--630cb020d317946b2c18b015 with answer
+"Full moon "
+2022-08-29 15:26:40	⚠ Rejected assignment 0002183356--630cb0337a82c7717521943e with answer
+"relation between earth and moon"
+2022-08-29 15:26:41	✔ Accepted assignment 0002183356--630cb057af3ebb2727bbb830 with answer
+"Soil profile"
+2022-08-29 15:26:42	⚠ Rejected assignment 0002183356--630cb021716307559004c1c5 with answer
+"in the class of"
+2022-08-29 15:26:43	⚠ Rejected assignment 0002183356--630cb04d7cfaf02096ffd09f with answer
+"Yah ghas hai"
+2022-08-29 15:26:44	⚠ Rejected assignment 0002183356--630cb05522c8e90d72c7ac27 with answer
+"Growth"
+2022-08-29 15:26:46	⚠ Rejected assignment 0002183356--630cb05fa05be7308d4950c4 with answer
+"Mercury "
+2022-08-29 15:26:47	✔ Accepted assignment 0002183356--630cb06cef591d16ede67ad9 with answer
+"names"
+2022-08-29 15:26:48	⚠ Rejected assignment 0002183356--630cb05616b73f29c21502cd with answer
+"Krill "
+2022-08-29 15:26:49	✔ Accepted assignment 0002183356--630cb02722c8e90d72c7a94a with answer
+"Spearmint tree which is mint "
+2022-08-29 15:26:49	ℹ Pool describe_relations is now 11% complete ...
+2022-08-29 15:27:05	✔ Accepted assignment 0002183356--630cb073716307559004c722 with answer
+"names"
+2022-08-29 15:27:06	⚠ Rejected assignment 0002183356--630cb06e7cfaf02096ffd2c1 with answer
+"Leaf"
+2022-08-29 15:27:07	✔ Accepted assignment 0002183356--630cb04cfd123c3cf9f072ae with answer
+"It explores  how  a plant grows "
+2022-08-29 15:27:08	⚠ Rejected assignment 0002183356--630cb064ff8f302e2d9718df with answer
+"inner boundaries pf the lobes"
+2022-08-29 15:27:09	⚠ Rejected assignment 0002183356--630cb07c3b6795124fc6eeaf with answer
+"in the class of"
+2022-08-29 15:27:11	⚠ Rejected assignment 0002183356--630cb07d735ccd0e800f4de4 with answer
+"Structure of a plants"
+2022-08-29 15:27:12	⚠ Rejected assignment 0002183356--630cb075a05be7308d495244 with answer
+"Bettel "
+2022-08-29 15:27:12	ℹ Pool describe_relations is now 12% complete ...
+2022-08-29 15:27:32	ℹ Pool describe_relations is now 13% complete ...
+2022-08-29 15:27:49	⚠ Rejected assignment 0002183356--630cb0557268a7548cad31f2 with answer
+"Mint"
+2022-08-29 15:27:51	⚠ Rejected assignment 0002183356--630cb080e2b7aa2ff74e5f62 with answer
+"Yeh fish hai iska test Bada jabardast hai"
+2022-08-29 15:27:52	✔ Accepted assignment 0002183356--630cb06faf3ebb2727bbbb76 with answer
+"Planets"
+2022-08-29 15:27:54	⚠ Rejected assignment 0002183356--630cb097e09bfb3537b5924e with answer
+"Oblique"
+2022-08-29 15:27:55	⚠ Rejected assignment 0002183356--630cb063a22771012dba8159 with answer
+"no realtion"
+2022-08-29 15:27:56	✔ Accepted assignment 0002183356--630cb08b3cd1d43971fd0f2f with answer
+"names"
+2022-08-29 15:27:57	⚠ Rejected assignment 0002183356--630cb012fd123c3cf9f06ef7 with answer
+"Adult"
+2022-08-29 15:27:58	⚠ Rejected assignment 0002183356--630cb0a47268a7548cad39db with answer
+"Пнгщдло"
+2022-08-29 15:27:59	✔ Accepted assignment 0002183356--630cb0b3e2b7aa2ff74e6312 with answer
+"names"
+2022-08-29 15:28:00	⚠ Rejected assignment 0002183356--630cb01793220d47e7b5d1d8 with answer
+"A cross B."
+2022-08-29 15:28:01	⚠ Rejected assignment 0002183356--630cb0b631e5d6109f8563a4 with answer
+"Мрллз"
+2022-08-29 15:28:02	✔ Accepted assignment 0002183356--630cafe693220d47e7b5cf55 with answer
+"Is description of "
+2022-08-29 15:28:02	ℹ Pool describe_relations is now 14% complete ...
+2022-08-29 15:28:19	⚠ Rejected assignment 0002183356--630cb0c0a1a4ab63172615d6 with answer
+"Прлщщ"
+2022-08-29 15:28:20	⚠ Rejected assignment 0002183356--630cafeba1a4ab63172604c8 with answer
+"Phases of the moon"
+2022-08-29 15:28:21	⚠ Rejected assignment 0002183356--630cafbbd317946b2c18a952 with answer
+"яйцеклетка в опасности в организмие трипер"
+2022-08-29 15:28:22	✔ Accepted assignment 0002183356--630cb00d7a82c77175218fb0 with answer
+"names"
+2022-08-29 15:28:23	ℹ Pool describe_relations is now 15% complete ...
+2022-08-29 15:28:42	ℹ Pool describe_relations is now 15% complete ...
+2022-08-29 15:28:59	✔ Accepted assignment 0002183356--630cb0b18a5808447198f8fe with answer
+"cannot judge"
+2022-08-29 15:29:00	✔ Accepted assignment 0002183356--630caf9ba22771012dba70bb with answer
+"there is a connection"
+2022-08-29 15:29:02	✔ Accepted assignment 0002183356--630caff6a05be7308d494999 with answer
+"Describes"
+2022-08-29 15:29:02	✔ Accepted assignment 0002183356--630cb009a1a4ab63172607bd with answer
+"Plastered"
+2022-08-29 15:29:03	⚠ Rejected assignment 0002183356--630cb0ead317946b2c18be98 with answer
+"В"
+2022-08-29 15:29:04	✔ Accepted assignment 0002183356--630cb07a16b73f29c215048b with answer
+"Diagram of the parts of a plant which are solid and visible in a plant"
+2022-08-29 15:29:10	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:29:26	✔ Accepted assignment 0002183356--630cb0e3a05be7308d4959b7 with answer
+"names"
+2022-08-29 15:29:27	⚠ Rejected assignment 0002183356--630cb0cae371414f3276695b with answer
+"A names B"
+2022-08-29 15:29:27	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:29:52	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:30:08	✔ Accepted assignment 0002183356--630cb116a22771012dba928f with answer
+"names"
+2022-08-29 15:30:10	⚠ Rejected assignment 0002183356--630cb0bc22c8e90d72c7b7bc with answer
+"A names B."
+2022-08-29 15:30:11	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:30:28	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:30:45	⚠ Rejected assignment 0002183356--630cb0c1e2b7aa2ff74e646e with answer
+"Name"
+2022-08-29 15:30:46	⚠ Rejected assignment 0002183356--630cb156a05be7308d49618e with answer
+"Radius"
+2022-08-29 15:30:48	ℹ Pool describe_relations is now 16% complete ...
+2022-08-29 15:31:11	ℹ Pool describe_relations is now 17% complete ...
+2022-08-29 15:31:28	✔ Accepted assignment 0002183356--630cb0ef9d444055d6910050 with answer
+"intersects"
+2022-08-29 15:31:29	⚠ Rejected assignment 0002183356--630cb1732c38525b06a62cf9 with answer
+"Name"
+2022-08-29 15:31:31	⚠ Rejected assignment 0002183356--630cb17fe3a4854c648cc301 with answer
+"Phase of"
+2022-08-29 15:31:32	✔ Accepted assignment 0002183356--630cb15d716307559004d90f with answer
+"gives information about"
+2022-08-29 15:31:32	ℹ Pool describe_relations is now 17% complete ...
+2022-08-29 15:31:51	ℹ Pool describe_relations is now 17% complete ...
+2022-08-29 15:32:08	✔ Accepted assignment 0002183356--630cb161f08fdf14c5fc38cd with answer
+"names"
+2022-08-29 15:32:09	✔ Accepted assignment 0002183356--630cb076b8d27e33eb6cd425 with answer
+"Rectangle "
+2022-08-29 15:32:09	✔ Accepted assignment 0002183356--630cb17ba1d5dd12f433e32a with answer
+"Consists of"
+2022-08-29 15:32:09	ℹ Pool describe_relations is now 18% complete ...
+2022-08-29 15:32:27	ℹ Pool describe_relations is now 18% complete ...
+2022-08-29 15:32:44	✔ Accepted assignment 0002183356--630cb1927a82c7717521bd54 with answer
+"Parts"
+2022-08-29 15:32:45	✔ Accepted assignment 0002183356--630cb1b119eedd4475b34952 with answer
+"describes"
+2022-08-29 15:32:46	✔ Accepted assignment 0002183356--630cb19816b73f29c21515bd with answer
+"is the class of"
+2022-08-29 15:32:47	✔ Accepted assignment 0002183356--630cb1cf4fd1d555930bb9a2 with answer
+"Gives information about"
+2022-08-29 15:32:47	ℹ Pool describe_relations is now 18% complete ...
+2022-08-29 15:33:07	ℹ Pool describe_relations is now 19% complete ...
+2022-08-29 15:33:24	✔ Accepted assignment 0002183356--630cb1e6735ccd0e800f5608 with answer
+"Describes"
+2022-08-29 15:33:25	✔ Accepted assignment 0002183356--630cb1bca05be7308d4967c7 with answer
+"is a class of"
+2022-08-29 15:33:26	✔ Accepted assignment 0002183356--630cb1e1a05be7308d496a93 with answer
+"describes"
+2022-08-29 15:33:27	✔ Accepted assignment 0002183356--630cb1f9e2b7aa2ff74e7cde with answer
+"Names"
+2022-08-29 15:33:27	ℹ Pool describe_relations is now 19% complete ...
+2022-08-29 15:33:46	ℹ Pool describe_relations is now 19% complete ...
+2022-08-29 15:34:03	✔ Accepted assignment 0002183356--630cb210862f3f043a1f8134 with answer
+"Names"
+2022-08-29 15:34:04	✔ Accepted assignment 0002183356--630cb21afd123c3cf9f09117 with answer
+"Names"
+2022-08-29 15:34:05	⚠ Rejected assignment 0002183356--630cb1078a5808447198fcfd with answer
+"А"
+2022-08-29 15:34:06	ℹ Pool describe_relations is now 20% complete ...
+2022-08-29 15:34:23	ℹ Pool describe_relations is now 20% complete ...
+2022-08-29 15:34:40	✔ Accepted assignment 0002183356--630cb202a1d5dd12f433eaf9 with answer
+"is a class of"
+2022-08-29 15:34:41	⚠ Rejected assignment 0002183356--630cb1f07268a7548cad5945 with answer
+"from egg to caterpillar, from caterpillar to larva, from larva to beetle"
+2022-08-29 15:34:42	✔ Accepted assignment 0002183356--630cb24ae2b7aa2ff74e8230 with answer
+"is a class of"
+2022-08-29 15:34:43	✔ Accepted assignment 0002183356--630cb2028a58084471990769 with answer
+"names"
+2022-08-29 15:34:44	ℹ Pool describe_relations is now 20% complete ...
+2022-08-29 15:35:01	ℹ Pool describe_relations is now 21% complete ...
+2022-08-29 15:35:18	✔ Accepted assignment 0002183356--630cb1e0857d4243e7c78c6a with answer
+"describe"
+2022-08-29 15:35:20	⚠ Rejected assignment 0002183356--630cb1cab5470b3f336a89a9 with answer
+"beak view"
+2022-08-29 15:35:21	✔ Accepted assignment 0002183356--630cb1e3ef591d16ede69312 with answer
+"is the class of"
+2022-08-29 15:35:21	✔ Accepted assignment 0002183356--630cb25ba05be7308d49713c with answer
+"names"
+2022-08-29 15:35:22	⚠ Rejected assignment 0002183356--630cb1b5a22771012dba9ef0 with answer
+"depth"
+2022-08-29 15:35:23	ℹ Pool describe_relations is now 21% complete ...
+2022-08-29 15:35:44	ℹ Pool describe_relations is now 21% complete ...
+2022-08-29 15:36:00	⚠ Rejected assignment 0002183356--630cb250ff8f302e2d973727 with answer
+"the whale feeds on krill, krill feeds on phytoplankton"
+2022-08-29 15:36:02	✔ Accepted assignment 0002183356--630cb26aa05be7308d497252 with answer
+"seeds in the ear"
+2022-08-29 15:36:03	✔ Accepted assignment 0002183356--630cafe23b6795124fc6e4ff with answer
+"The root collects water containing minerals from the soil and the shoot gets it
+from the root."
+2022-08-29 15:36:04	✔ Accepted assignment 0002183356--630cb27b65b2cc1fa7fabcf0 with answer
+"names"
+2022-08-29 15:36:05	✔ Accepted assignment 0002183356--630cb2853b6795124fc70de8 with answer
+"phases"
+2022-08-29 15:36:05	ℹ Pool describe_relations is now 22% complete ...
+2022-08-29 15:36:24	ℹ Pool describe_relations is now 22% complete ...
+2022-08-29 15:36:41	⚠ Rejected assignment 0002183356--630cb296e2b7aa2ff74e8b10 with answer
+"The first letters of the bird 's name"
+2022-08-29 15:36:42	✔ Accepted assignment 0002183356--630cb2aaaf3ebb2727bbf272 with answer
+"names"
+2022-08-29 15:36:42	ℹ Pool describe_relations is now 22% complete ...
+2022-08-29 15:36:58	ℹ Pool describe_relations is now 22% complete ...
+2022-08-29 15:37:15	✔ Accepted assignment 0002183356--630cb2a4d317946b2c18dd92 with answer
+"view"
+2022-08-29 15:37:16	⚠ Rejected assignment 0002183356--630cb1c3af3ebb2727bbd9ad with answer
+"A names B"
+2022-08-29 15:37:16	ℹ Pool describe_relations is now 23% complete ...
+2022-08-29 15:37:35	ℹ Pool describe_relations is now 23% complete ...
+2022-08-29 15:37:51	✔ Accepted assignment 0002183356--630cb255ef591d16ede698dc with answer
+"is a class of"
+2022-08-29 15:37:52	✔ Accepted assignment 0002183356--630cb2cee09bfb3537b5adf8 with answer
+"The type of leaf of the tree from flowering to drying"
+2022-08-29 15:37:53	✔ Accepted assignment 0002183356--630cb271e3a4854c648cd6cc with answer
+"describes"
+2022-08-29 15:37:54	⚠ Rejected assignment 0002183356--630cb2ac16b73f29c215259d with answer
+"rotation"
+2022-08-29 15:37:54	ℹ Pool describe_relations is now 23% complete ...
+2022-08-29 15:38:14	ℹ Pool describe_relations is now 23% complete ...
+2022-08-29 15:38:31	✔ Accepted assignment 0002183356--630cb2d7fd123c3cf9f09dd7 with answer
+"describes"
+2022-08-29 15:38:32	✔ Accepted assignment 0002183356--630cb2f83b6795124fc715c7 with answer
+"grows"
+2022-08-29 15:38:32	ℹ Pool describe_relations is now 24% complete ...
+2022-08-29 15:38:50	ℹ Pool describe_relations is now 24% complete ...
+2022-08-29 15:39:07	✔ Accepted assignment 0002183356--630cb16cb8d27e33eb6cf39a with answer
+"names"
+2022-08-29 15:39:07	✔ Accepted assignment 0002183356--630cb31b19eedd4475b36793 with answer
+"lighting"
+2022-08-29 15:39:08	✔ Accepted assignment 0002183356--630cb34722c8e90d72c7e347 with answer
+"shines"
+2022-08-29 15:39:08	ℹ Pool describe_relations is now 24% complete ...
+2022-08-29 15:39:35	✔ Accepted assignment 0002183356--630cb329a1a4ab6317264158 with answer
+"names"
+2022-08-29 15:39:36	✔ Accepted assignment 0002183356--630cb36b716307559004ff99 with answer
+"describes"
+2022-08-29 15:39:36	ℹ Pool describe_relations is now 25% complete ...
+2022-08-29 15:39:52	ℹ Pool describe_relations is now 25% complete ...
+2022-08-29 15:40:09	✔ Accepted assignment 0002183356--630cb36765b2cc1fa7facce8 with answer
+"forms"
+2022-08-29 15:40:11	⚠ Rejected assignment 0002183356--630cb142b8d27e33eb6cee65 with answer
+"A names B"
+2022-08-29 15:40:12	✔ Accepted assignment 0002183356--630cb366a06b2575d886802a with answer
+"formed"
+2022-08-29 15:40:13	⚠ Rejected assignment 0002183356--630cb38522c8e90d72c7e729 with answer
+"index of"
+2022-08-29 15:40:14	✔ Accepted assignment 0002183356--630cb361a22771012dbac0a8 with answer
+"names"
+2022-08-29 15:40:14	ℹ Pool describe_relations is now 26% complete ...
+2022-08-29 15:40:31	ℹ Pool describe_relations is now 26% complete ...
+2022-08-29 15:40:48	⚠ Rejected assignment 0002183356--630cb328735ccd0e800f6134 with answer
+"A name B as the stage of development an insect."
+2022-08-29 15:40:49	✔ Accepted assignment 0002183356--630cb39619eedd4475b37221 with answer
+"layers"
+2022-08-29 15:40:51	⚠ Rejected assignment 0002183356--630cb3ac71630755900503b2 with answer
+"yes"
+2022-08-29 15:40:51	ℹ Pool describe_relations is now 26% complete ...
+2022-08-29 15:41:10	ℹ Pool describe_relations is now 26% complete ...
+2022-08-29 15:41:26	✔ Accepted assignment 0002183356--630cb3a0af3ebb2727bc091b with answer
+"is the class of"
+2022-08-29 15:41:27	✔ Accepted assignment 0002183356--630cb312f08fdf14c5fc5781 with answer
+"Describes"
+2022-08-29 15:41:28	✔ Accepted assignment 0002183356--630cb397e09bfb3537b5b744 with answer
+"develops"
+2022-08-29 15:41:30	⚠ Rejected assignment 0002183356--630cb3bde371414f32769caf with answer
+"quantity"
+2022-08-29 15:41:30	ℹ Pool describe_relations is now 26% complete ...
+2022-08-29 15:41:47	ℹ Pool describe_relations is now 27% complete ...
+2022-08-29 15:42:04	✔ Accepted assignment 0002183356--630cb3ea3cd1d43971fd45f4 with answer
+"describes"
+2022-08-29 15:42:05	✔ Accepted assignment 0002183356--630cb3e27163075590050746 with answer
+"spews"
+2022-08-29 15:42:07	✔ Accepted assignment 0002183356--630cb3f8b5470b3f336aa39a with answer
+"describes"
+2022-08-29 15:42:07	✔ Accepted assignment 0002183356--630cb4043b6795124fc727be with answer
+"describes"
+2022-08-29 15:42:08	✔ Accepted assignment 0002183356--630cb40de371414f3276a283 with answer
+"describes"
+2022-08-29 15:42:09	✔ Accepted assignment 0002183356--630cb3eb7a82c7717521d93e with answer
+"remoteness"
+2022-08-29 15:42:09	ℹ Pool describe_relations is now 27% complete ...
+2022-08-29 15:42:27	ℹ Pool describe_relations is now 28% complete ...
+2022-08-29 15:42:44	✔ Accepted assignment 0002183356--630cb4177268a7548cad88f6 with answer
+"describes"
+2022-08-29 15:42:45	⚠ Rejected assignment 0002183356--630cb40aa05be7308d498cdc with answer
+"a good"
+2022-08-29 15:42:46	✔ Accepted assignment 0002183356--630cb3f9e371414f3276a044 with answer
+"multiply"
+2022-08-29 15:42:47	✔ Accepted assignment 0002183356--630cb3d0a06b2575d88687d1 with answer
+"Is the kind of"
+2022-08-29 15:42:47	ℹ Pool describe_relations is now 28% complete ...
+2022-08-29 15:43:04	ℹ Pool describe_relations is now 29% complete ...
+2022-08-29 15:43:21	⚠ Rejected assignment 0002183356--630cb428e371414f3276a405 with answer
+"b"
+2022-08-29 15:43:22	✔ Accepted assignment 0002183356--630cb372b8d27e33eb6d2a5c with answer
+"is the class of"
+2022-08-29 15:43:23	⚠ Rejected assignment 0002183356--630cb443a1a4ab631726574d with answer
+"b"
+2022-08-29 15:43:24	✔ Accepted assignment 0002183356--630cb41a3cd1d43971fd48a9 with answer
+"is the class of"
+2022-08-29 15:43:25	⚠ Rejected assignment 0002183356--630cb422b8d27e33eb6d37d3 with answer
+"image of"
+2022-08-29 15:43:26	ℹ Pool describe_relations is now 29% complete ...
+2022-08-29 15:43:44	ℹ Pool describe_relations is now 29% complete ...
+2022-08-29 15:44:01	✔ Accepted assignment 0002183356--630cb4324fd1d555930be05d with answer
+"digests"
+2022-08-29 15:44:01	✔ Accepted assignment 0002183356--630cb4133b6795124fc728b4 with answer
+"describes"
+2022-08-29 15:44:03	✔ Accepted assignment 0002183356--630cb187e3a4854c648cc388 with answer
+"A describes the point B rotates around"
+2022-08-29 15:44:04	⚠ Rejected assignment 0002183356--630cb45f41dc1350f7e8a1b6 with answer
+"border of"
+2022-08-29 15:44:05	⚠ Rejected assignment 0002183356--630cb45daf3ebb2727bc1ab4 with answer
+"center"
+2022-08-29 15:44:05	ℹ Pool describe_relations is now 30% complete ...
+2022-08-29 15:44:27	ℹ Pool describe_relations is now 31% complete ...
+2022-08-29 15:44:44	⚠ Rejected assignment 0002183356--630cb486af3ebb2727bc1e60 with answer
+"Н"
+2022-08-29 15:44:45	✔ Accepted assignment 0002183356--630cb44dd317946b2c18fdac with answer
+"describes"
+2022-08-29 15:44:46	✔ Accepted assignment 0002183356--630cb477fd123c3cf9f0bc43 with answer
+"Is the kind of"
+2022-08-29 15:44:48	✔ Accepted assignment 0002183356--630cb48c9d444055d6913fc9 with answer
+"describes"
+2022-08-29 15:44:48	✔ Accepted assignment 0002183356--630cb40e862f3f043a1fb3bd with answer
+"is the class of"
+2022-08-29 15:44:50	⚠ Rejected assignment 0002183356--630cb48d7163075590051130 with answer
+"type"
+2022-08-29 15:44:51	✔ Accepted assignment 0002183356--630cb493a217e87efecd0c02 with answer
+"Is the class of"
+2022-08-29 15:44:52	✔ Accepted assignment 0002183356--630cb4960b55c35e8cb18bc6 with answer
+"describes"
+2022-08-29 15:44:53	✔ Accepted assignment 0002183356--630cb3d6e2b7aa2ff74ea5e5 with answer
+"is a class of"
+2022-08-29 15:44:54	✔ Accepted assignment 0002183356--630cb4a665b2cc1fa7fae161 with answer
+"describes"
+2022-08-29 15:44:55	⚠ Rejected assignment 0002183356--630cb4a1b5470b3f336aac43 with answer
+"name"
+2022-08-29 15:44:55	ℹ Pool describe_relations is now 31% complete ...
+2022-08-29 15:45:16	ℹ Pool describe_relations is now 32% complete ...
+2022-08-29 15:45:33	✔ Accepted assignment 0002183356--630cb4afa05be7308d49972a with answer
+"describes"
+2022-08-29 15:45:34	✔ Accepted assignment 0002183356--630cb473c459f02a1a1d04f2 with answer
+"named"
+2022-08-29 15:45:35	✔ Accepted assignment 0002183356--630cb4bcb5470b3f336aaded with answer
+"describes"
+2022-08-29 15:45:36	✔ Accepted assignment 0002183356--630cb492ef591d16ede6bca3 with answer
+"names"
+2022-08-29 15:45:37	✔ Accepted assignment 0002183356--630cb4be19eedd4475b396f9 with answer
+"names"
+2022-08-29 15:45:38	✔ Accepted assignment 0002183356--630cb4a47cfaf0209600118d with answer
+"Shows"
+2022-08-29 15:45:38	ℹ Pool describe_relations is now 32% complete ...
+2022-08-29 15:45:56	ℹ Pool describe_relations is now 33% complete ...
+2022-08-29 15:46:12	✔ Accepted assignment 0002183356--630cb4d8857d4243e7c7c579 with answer
+"describes"
+2022-08-29 15:46:13	✔ Accepted assignment 0002183356--630cb4ec71630755900518ff with answer
+"Names"
+2022-08-29 15:46:15	⚠ Rejected assignment 0002183356--630cb4c722c8e90d72c7fd47 with answer
+"part of"
+2022-08-29 15:46:16	✔ Accepted assignment 0002183356--630cb411e3a4854c648cf619 with answer
+"gives information about "
+2022-08-29 15:46:17	✔ Accepted assignment 0002183356--630cb4fa65b2cc1fa7fae7c6 with answer
+"Names"
+2022-08-29 15:46:18	✔ Accepted assignment 0002183356--630cb46e857d4243e7c7be81 with answer
+"bears fruit"
+2022-08-29 15:46:19	✔ Accepted assignment 0002183356--630cb4e43b6795124fc737e0 with answer
+"names"
+2022-08-29 15:46:19	✔ Accepted assignment 0002183356--630cb504e3a4854c648d0a46 with answer
+"names"
+2022-08-29 15:46:20	✔ Accepted assignment 0002183356--630cb503b8d27e33eb6d4770 with answer
+"Names"
+2022-08-29 15:46:20	ℹ Pool describe_relations is now 34% complete ...
+2022-08-29 15:46:45	ℹ Pool describe_relations is now 34% complete ...
+2022-08-29 15:47:02	✔ Accepted assignment 0002183356--630cb4cc65b2cc1fa7fae440 with answer
+"is the class of"
+2022-08-29 15:47:03	✔ Accepted assignment 0002183356--630cb51d4831ca0f348a5c9f with answer
+"names"
+2022-08-29 15:47:03	✔ Accepted assignment 0002183356--630cb510dd4a291311d73171 with answer
+"describes"
+2022-08-29 15:47:04	⚠ Rejected assignment 0002183356--630cb4fbef591d16ede6c422 with answer
+"organs of"
+2022-08-29 15:47:05	✔ Accepted assignment 0002183356--630cb50616b73f29c2154b71 with answer
+"are smoothed out"
+2022-08-29 15:47:05	ℹ Pool describe_relations is now 35% complete ...
+2022-08-29 15:47:24	ℹ Pool describe_relations is now 35% complete ...
+2022-08-29 15:47:41	✔ Accepted assignment 0002183356--630cb5367163075590051e79 with answer
+"names"
+2022-08-29 15:47:41	✔ Accepted assignment 0002183356--630cb5357cfaf020960023fb with answer
+"Describes"
+2022-08-29 15:47:43	⚠ Rejected assignment 0002183356--630cb53e1dc9cc6280194e23 with answer
+"name"
+2022-08-29 15:47:44	✔ Accepted assignment 0002183356--630cb544e371414f3276b638 with answer
+"ripen"
+2022-08-29 15:47:50	ℹ Pool describe_relations is now 35% complete ...
+2022-08-29 15:48:07	✔ Accepted assignment 0002183356--630cb4ff3b6795124fc739e7 with answer
+"names"
+2022-08-29 15:48:09	⚠ Rejected assignment 0002183356--630cb4f70b55c35e8cb18f35 with answer
+"illustration of"
+2022-08-29 15:48:10	✔ Accepted assignment 0002183356--630cb54bff8f302e2d97649d with answer
+"is a name of"
+2022-08-29 15:48:10	✔ Accepted assignment 0002183356--630cb55c7163075590052093 with answer
+"Names"
+2022-08-29 15:48:10	ℹ Pool describe_relations is now 36% complete ...
+2022-08-29 15:48:28	ℹ Pool describe_relations is now 36% complete ...
+2022-08-29 15:48:44	✔ Accepted assignment 0002183356--630cb5761dc9cc6280195193 with answer
+"describes"
+2022-08-29 15:48:45	✔ Accepted assignment 0002183356--630cb3a9e371414f32769b33 with answer
+"A is suborder of B"
+2022-08-29 15:48:47	⚠ Rejected assignment 0002183356--630cb560fd123c3cf9f0cb5d with answer
+"decribes"
+2022-08-29 15:48:48	✔ Accepted assignment 0002183356--630cb57b4831ca0f348a5f40 with answer
+"is a name of"
+2022-08-29 15:48:48	ℹ Pool describe_relations is now 37% complete ...
+2022-08-29 15:49:05	ℹ Pool describe_relations is now 37% complete ...
+2022-08-29 15:49:22	✔ Accepted assignment 0002183356--630cb5a2ff8f302e2d97690f with answer
+"names"
+2022-08-29 15:49:23	⚠ Rejected assignment 0002183356--630cb567a22771012dbaf350 with answer
+"viable"
+2022-08-29 15:49:24	✔ Accepted assignment 0002183356--630cb586ef591d16ede6cc8e with answer
+"Names"
+2022-08-29 15:49:24	ℹ Pool describe_relations is now 37% complete ...
+2022-08-29 15:49:44	ℹ Pool describe_relations is now 38% complete ...
+2022-08-29 15:50:01	✔ Accepted assignment 0002183356--630cb5adb8d27e33eb6d51c8 with answer
+"names"
+2022-08-29 15:50:03	✔ Accepted assignment 0002183356--630cb571ff8f302e2d97669e with answer
+"gives information about"
+2022-08-29 15:50:04	✔ Accepted assignment 0002183356--630cb54ef08fdf14c5fc87c9 with answer
+"is element of"
+2022-08-29 15:50:05	✔ Accepted assignment 0002183356--630cb51aa05be7308d499e99 with answer
+"names"
+2022-08-29 15:50:06	⚠ Rejected assignment 0002183356--630cb5baef591d16ede6cec5 with answer
+"decribes"
+2022-08-29 15:50:07	✔ Accepted assignment 0002183356--630cb5898a58084471993e0c with answer
+"describes part of"
+2022-08-29 15:50:08	⚠ Rejected assignment 0002183356--630cb5bb0b55c35e8cb195e1 with answer
+"acceleration"
+2022-08-29 15:50:09	✔ Accepted assignment 0002183356--630cb5e6e3a4854c648d18b4 with answer
+"describes"
+2022-08-29 15:50:10	✔ Accepted assignment 0002183356--630cb5d519eedd4475b3c4bb with answer
+"is a name of"
+2022-08-29 15:50:12	✔ Accepted assignment 0002183356--630cb5c70b55c35e8cb1962d with answer
+"Shows"
+2022-08-29 15:50:12	✔ Accepted assignment 0002183356--630cb4abef591d16ede6be4c with answer
+"is a class of"
+2022-08-29 15:50:12	ℹ Pool describe_relations is now 39% complete ...
+2022-08-29 15:50:30	⚠ Rejected assignment 0002183356--630cb5daef591d16ede6d0ae with answer
+"part of plants"
+2022-08-29 15:50:31	✔ Accepted assignment 0002183356--630cb5f44fd1d555930bfc2f with answer
+"is a name of"
+2022-08-29 15:50:32	✔ Accepted assignment 0002183356--630cb5e319eedd4475b3c5f8 with answer
+"names"
+2022-08-29 15:50:33	✔ Accepted assignment 0002183356--630cb58eb5470b3f336ab779 with answer
+"names an organ of"
+2022-08-29 15:50:34	✔ Accepted assignment 0002183356--630cb5e17268a7548cadc295 with answer
+"is the stage of"
+2022-08-29 15:50:35	✔ Accepted assignment 0002183356--630cb5fd7268a7548cadc577 with answer
+"describes"
+2022-08-29 15:50:35	ℹ Pool describe_relations is now 40% complete ...
+2022-08-29 15:50:53	ℹ Pool describe_relations is now 41% complete ...
+2022-08-29 15:51:10	✔ Accepted assignment 0002183356--630cb5f419eedd4475b3c734 with answer
+"illuminates"
+2022-08-29 15:51:12	⚠ Rejected assignment 0002183356--630cb5f5d317946b2c1916c8 with answer
+"Yes"
+2022-08-29 15:51:12	✔ Accepted assignment 0002183356--630cb60de3a4854c648d1b77 with answer
+"describes"
+2022-08-29 15:51:13	⚠ Rejected assignment 0002183356--630cb619fd123c3cf9f0d5b9 with answer
+"Yes"
+2022-08-29 15:51:14	✔ Accepted assignment 0002183356--630cb60a7268a7548cadc65a with answer
+"names"
+2022-08-29 15:51:14	✔ Accepted assignment 0002183356--630cb5f6a217e87efecd1c87 with answer
+"Names"
+2022-08-29 15:51:15	✔ Accepted assignment 0002183356--630cb615a1d5dd12f4343a46 with answer
+"describes"
+2022-08-29 15:51:17	✔ Accepted assignment 0002183356--630cb627e3a4854c648d1d15 with answer
+"names"
+2022-08-29 15:51:18	⚠ Rejected assignment 0002183356--630cb62141dc1350f7e8b9ac with answer
+"in the class of"
+2022-08-29 15:51:18	ℹ Pool describe_relations is now 41% complete ...
+2022-08-29 15:51:34	ℹ Pool describe_relations is now 42% complete ...
+2022-08-29 15:51:51	✔ Accepted assignment 0002183356--630cb60a7a82c7717521ee65 with answer
+"Part B is the stem of a flower"
+2022-08-29 15:51:52	✔ Accepted assignment 0002183356--630cb62d19eedd4475b3cc1e with answer
+"describes"
+2022-08-29 15:51:53	✔ Accepted assignment 0002183356--630cb633857d4243e7c7db38 with answer
+"is a name of"
+2022-08-29 15:51:54	✔ Accepted assignment 0002183356--630cb63da1d5dd12f4344052 with answer
+"names"
+2022-08-29 15:51:55	✔ Accepted assignment 0002183356--630cb616e09bfb3537b5dcce with answer
+"revolves"
+2022-08-29 15:51:56	⚠ Rejected assignment 0002183356--630cb630af3ebb2727bc4464 with answer
+"Reflection"
+2022-08-29 15:51:57	✔ Accepted assignment 0002183356--630cb626e3a4854c648d1cdb with answer
+"liver"
+2022-08-29 15:51:58	✔ Accepted assignment 0002183356--630cb647a05be7308d49b0e5 with answer
+"describes"
+2022-08-29 15:51:59	✔ Accepted assignment 0002183356--630cb653ff8f302e2d9773ab with answer
+"names"
+2022-08-29 15:52:00	✔ Accepted assignment 0002183356--630cb63fdd4a291311d74442 with answer
+"part B is the letter"
+2022-08-29 15:52:00	ℹ Pool describe_relations is now 43% complete ...
+2022-08-29 15:52:20	ℹ Pool describe_relations is now 44% complete ...
+2022-08-29 15:52:37	✔ Accepted assignment 0002183356--630cb64941dc1350f7e8bca0 with answer
+"names"
+2022-08-29 15:52:38	✔ Accepted assignment 0002183356--630cb60cd317946b2c191885 with answer
+"names items contained in "
+2022-08-29 15:52:39	✔ Accepted assignment 0002183356--630cb62831e5d6109f85a536 with answer
+"Names"
+2022-08-29 15:52:40	✔ Accepted assignment 0002183356--630cb662716307559005325d with answer
+"names"
+2022-08-29 15:52:41	⚠ Rejected assignment 0002183356--630cb656e2b7aa2ff74edb86 with answer
+"B"
+2022-08-29 15:52:42	✔ Accepted assignment 0002183356--630cb5dbaf3ebb2727bc3cfd with answer
+"names"
+2022-08-29 15:52:43	⚠ Rejected assignment 0002183356--630cb6594fd1d555930c0361 with answer
+"Heat"
+2022-08-29 15:52:44	✔ Accepted assignment 0002183356--630cb65e862f3f043a1ff4c3 with answer
+"describes"
+2022-08-29 15:52:45	✔ Accepted assignment 0002183356--630cb60f4831ca0f348a6327 with answer
+"gives information about"
+2022-08-29 15:52:47	✔ Accepted assignment 0002183356--630cb66ea22771012dbb0a07 with answer
+"describes"
+2022-08-29 15:52:48	⚠ Rejected assignment 0002183356--630cb66e3b6795124fc74fe0 with answer
+"A"
+2022-08-29 15:52:49	✔ Accepted assignment 0002183356--630cb67622c8e90d72c819d2 with answer
+"Part B is bodies"
+2022-08-29 15:52:51	⚠ Rejected assignment 0002183356--630cb670c459f02a1a1d1b1f with answer
+"Reproduction"
+2022-08-29 15:52:52	✔ Accepted assignment 0002183356--630cb676e371414f3276caed with answer
+"describes"
+2022-08-29 15:52:53	⚠ Rejected assignment 0002183356--630cb685fd123c3cf9f0dc52 with answer
+"B"
+2022-08-29 15:52:54	✔ Accepted assignment 0002183356--630cb685af3ebb2727bc4cba with answer
+"names"
+2022-08-29 15:52:54	ℹ Pool describe_relations is now 45% complete ...
+2022-08-29 15:53:11	⚠ Rejected assignment 0002183356--630cb68e41dc1350f7e8c0f2 with answer
+"B"
+2022-08-29 15:53:12	✔ Accepted assignment 0002183356--630cb67ae3a4854c648d241d with answer
+"names"
+2022-08-29 15:53:13	⚠ Rejected assignment 0002183356--630cb695fd123c3cf9f0dd32 with answer
+"A"
+2022-08-29 15:53:14	✔ Accepted assignment 0002183356--630cb66b857d4243e7c7deb3 with answer
+"Describes"
+2022-08-29 15:53:15	⚠ Rejected assignment 0002183356--630cb68ea06b2575d886b3ab with answer
+"Growth"
+2022-08-29 15:53:16	✔ Accepted assignment 0002183356--630cb693af3ebb2727bc4df2 with answer
+"describes"
+2022-08-29 15:53:17	✔ Accepted assignment 0002183356--630cb68e7cfaf02096003888 with answer
+"describes"
+2022-08-29 15:53:18	✔ Accepted assignment 0002183356--630cb67df08fdf14c5fc9cfc with answer
+"describes the state of"
+2022-08-29 15:53:18	ℹ Pool describe_relations is now 46% complete ...
+2022-08-29 15:53:37	ℹ Pool describe_relations is now 47% complete ...
+2022-08-29 15:53:53	✔ Accepted assignment 0002183356--630cb6a70b55c35e8cb19f39 with answer
+"describes"
+2022-08-29 15:53:54	✔ Accepted assignment 0002183356--630cb6a37268a7548cadd511 with answer
+"Plants"
+2022-08-29 15:53:55	✔ Accepted assignment 0002183356--630cb69a6c7e504027a45cc2 with answer
+"names"
+2022-08-29 15:53:56	✔ Accepted assignment 0002183356--630cb6a418ad0d3f5be52004 with answer
+"describes"
+2022-08-29 15:53:57	✔ Accepted assignment 0002183356--630cb66ae3a4854c648d2209 with answer
+"names"
+2022-08-29 15:53:58	✔ Accepted assignment 0002183356--630cb6bf0b55c35e8cb1a029 with answer
+"names"
+2022-08-29 15:53:59	✔ Accepted assignment 0002183356--630cb6bfa05be7308d49ba3d with answer
+"Planets"
+2022-08-29 15:54:00	✔ Accepted assignment 0002183356--630cb658a22771012dbb07bd with answer
+"crosses"
+2022-08-29 15:54:01	✔ Accepted assignment 0002183356--630cb6bef08fdf14c5fca25b with answer
+"describes"
+2022-08-29 15:54:02	✔ Accepted assignment 0002183356--630cb5ca7268a7548cadc091 with answer
+"B shows A"
+2022-08-29 15:54:03	✔ Accepted assignment 0002183356--630cb6cb3cd1d43971fd73dc with answer
+"names"
+2022-08-29 15:54:04	ℹ Pool describe_relations is now 48% complete ...
+2022-08-29 15:54:20	✔ Accepted assignment 0002183356--630cb69e22c8e90d72c81bfc with answer
+"Names"
+2022-08-29 15:54:21	✔ Accepted assignment 0002183356--630cb6d3e3a4854c648d2e7f with answer
+"describes"
+2022-08-29 15:54:22	✔ Accepted assignment 0002183356--630cb6cfa06b2575d886b800 with answer
+"Changing"
+2022-08-29 15:54:23	✔ Accepted assignment 0002183356--630cb6c9ff8f302e2d977da8 with answer
+"names"
+2022-08-29 15:54:24	✔ Accepted assignment 0002183356--630cb6d94fd1d555930c0d82 with answer
+"is a name of"
+2022-08-29 15:54:25	✔ Accepted assignment 0002183356--630cb6d6f08fdf14c5fca395 with answer
+"describes"
+2022-08-29 15:54:26	✔ Accepted assignment 0002183356--630cb6e4a05be7308d49bd0a with answer
+"Names"
+2022-08-29 15:54:28	✔ Accepted assignment 0002183356--630cb6ad65b2cc1fa7fb05fe with answer
+"names"
+2022-08-29 15:54:29	✔ Accepted assignment 0002183356--630cb5f97268a7548cadc508 with answer
+"is a class of"
+2022-08-29 15:54:29	ℹ Pool describe_relations is now 50% complete ...
+2022-08-29 15:54:46	✔ Accepted assignment 0002183356--630cb6f07163075590053e1d with answer
+"names"
+2022-08-29 15:54:47	✔ Accepted assignment 0002183356--630cb6d5af3ebb2727bc53ba with answer
+"postpones"
+2022-08-29 15:54:48	✔ Accepted assignment 0002183356--630cb6e719eedd4475b3dbb4 with answer
+"names"
+2022-08-29 15:54:49	✔ Accepted assignment 0002183356--630cb6ef7163075590053e04 with answer
+"Air"
+2022-08-29 15:54:50	✔ Accepted assignment 0002183356--630cb6ee7cfaf020960040b4 with answer
+"describes"
+2022-08-29 15:54:51	✔ Accepted assignment 0002183356--630cb705b8d27e33eb6d664b with answer
+"names"
+2022-08-29 15:55:06	✔ Accepted assignment 0002183356--630cb70522c8e90d72c823d5 with answer
+"describes"
+2022-08-29 15:55:07	⚠ Rejected assignment 0002183356--630cb6dc9d444055d6916617 with answer
+"A names B"
+2022-08-29 15:55:09	✔ Accepted assignment 0002183356--630cb70616b73f29c2157027 with answer
+"Revolving"
+2022-08-29 15:55:10	✔ Accepted assignment 0002183356--630cb702862f3f043a1ffe17 with answer
+"is a name of"
+2022-08-29 15:55:10	✔ Accepted assignment 0002183356--630cb71418ad0d3f5be5299a with answer
+"describes the state of"
+2022-08-29 15:55:10	ℹ Pool describe_relations is now 51% complete ...
+2022-08-29 15:55:28	ℹ Pool describe_relations is now 52% complete ...
+2022-08-29 15:55:45	⚠ Rejected assignment 0002183356--630cb71f3cd1d43971fd79fe with answer
+"Blast"
+2022-08-29 15:55:45	✔ Accepted assignment 0002183356--630cb6e24fd1d555930c0e23 with answer
+"Names"
+2022-08-29 15:55:47	✔ Accepted assignment 0002183356--630cb6897268a7548cadd2a1 with answer
+"part B is the letter"
+2022-08-29 15:55:48	✔ Accepted assignment 0002183356--630cb72b18ad0d3f5be52b1a with answer
+"Shapes"
+2022-08-29 15:55:49	⚠ Rejected assignment 0002183356--630cb6d4a06b2575d886b873 with answer
+"A names B"
+2022-08-29 15:55:50	✔ Accepted assignment 0002183356--630cb71e0b55c35e8cb1a792 with answer
+"describes"
+2022-08-29 15:55:51	✔ Accepted assignment 0002183356--630cb721e371414f3276d5e5 with answer
+"describes"
+2022-08-29 15:55:52	✔ Accepted assignment 0002183356--630cb688a1d5dd12f4344d97 with answer
+"names"
+2022-08-29 15:55:53	⚠ Rejected assignment 0002183356--630cb701e371414f3276d35e with answer
+"ecliptic"
+2022-08-29 15:55:54	✔ Accepted assignment 0002183356--630cb72fe371414f3276d6d1 with answer
+"part B is an insect"
+2022-08-29 15:55:55	⚠ Rejected assignment 0002183356--630cb71ed317946b2c192c6f with answer
+"A names B"
+2022-08-29 15:55:56	✔ Accepted assignment 0002183356--630cb73c9d444055d6916b76 with answer
+"is a class of"
+2022-08-29 15:55:57	✔ Accepted assignment 0002183356--630cb73add4a291311d75574 with answer
+"A is the class of B"
+2022-08-29 15:55:58	✔ Accepted assignment 0002183356--630cb6e4fd123c3cf9f0e302 with answer
+"gives information about"
+2022-08-29 15:55:58	ℹ Pool describe_relations is now 53% complete ...
+2022-08-29 15:56:15	✔ Accepted assignment 0002183356--630cb73b22c8e90d72c8280d with answer
+"describes"
+2022-08-29 15:56:16	⚠ Rejected assignment 0002183356--630cb7367a82c7717521fea0 with answer
+"Straight"
+2022-08-29 15:56:17	✔ Accepted assignment 0002183356--630cb72efd123c3cf9f0e7a4 with answer
+"Names"
+2022-08-29 15:56:18	⚠ Rejected assignment 0002183356--630cb6a1dd4a291311d74b9f with answer
+"A is the name of B, which shows the relationship between the selected
+elements"
+2022-08-29 15:56:20	⚠ Rejected assignment 0002183356--630cb75506f6833ac247a308 with answer
+"A names B"
+2022-08-29 15:56:21	✔ Accepted assignment 0002183356--630cb74ba1d5dd12f4346c31 with answer
+"describes"
+2022-08-29 15:56:22	✔ Accepted assignment 0002183356--630cb75ae371414f3276d97e with answer
+"Names"
+2022-08-29 15:56:23	✔ Accepted assignment 0002183356--630cb74d4fd1d555930c163d with answer
+"describes"
+2022-08-29 15:56:23	ℹ Pool describe_relations is now 55% complete ...
+2022-08-29 15:56:42	ℹ Pool describe_relations is now 56% complete ...
+2022-08-29 15:56:59	✔ Accepted assignment 0002183356--630cb748862f3f043a2002b3 with answer
+"part B is the title"
+2022-08-29 15:57:00	⚠ Rejected assignment 0002183356--630cb7527268a7548cade7a9 with answer
+"number of"
+2022-08-29 15:57:01	✔ Accepted assignment 0002183356--630cb7614fd1d555930c17c1 with answer
+"A is the class of B"
+2022-08-29 15:57:02	✔ Accepted assignment 0002183356--630cb7667163075590054888 with answer
+"describes"
+2022-08-29 15:57:02	⚠ Rejected assignment 0002183356--630cb76ba05be7308d49c77b with answer
+"in the class of"
+2022-08-29 15:57:03	✔ Accepted assignment 0002183356--630cb76841dc1350f7e8ce77 with answer
+"Light"
+2022-08-29 15:57:05	⚠ Rejected assignment 0002183356--630cb76f4fd1d555930c18b8 with answer
+"part of the moon"
+2022-08-29 15:57:06	✔ Accepted assignment 0002183356--630cb742e2b7aa2ff74ef101 with answer
+"pollen"
+2022-08-29 15:57:06	✔ Accepted assignment 0002183356--630cb7789d444055d69170e2 with answer
+"A is the class of B"
+2022-08-29 15:57:07	✔ Accepted assignment 0002183356--630cb76f857d4243e7c7ef10 with answer
+"describes"
+2022-08-29 15:57:08	✔ Accepted assignment 0002183356--630cb6f8a1a4ab631726869d with answer
+"is a class of"
+2022-08-29 15:57:09	✔ Accepted assignment 0002183356--630cb77d862f3f043a20069e with answer
+"describes"
+2022-08-29 15:57:09	✔ Accepted assignment 0002183356--630cb77a3b6795124fc766da with answer
+"labels"
+2022-08-29 15:57:11	⚠ Rejected assignment 0002183356--630cb77eb8d27e33eb6d7014 with answer
+"Earth"
+2022-08-29 15:57:12	✔ Accepted assignment 0002183356--630cb77ea1a4ab6317268f5a with answer
+"part B is part of the plant"
+2022-08-29 15:57:13	⚠ Rejected assignment 0002183356--630cb75aa05be7308d49c56b with answer
+"Names "
+2022-08-29 15:57:13	ℹ Pool describe_relations is now 57% complete ...
+2022-08-29 15:57:31	ℹ Pool describe_relations is now 57% complete ...
+2022-08-29 15:57:48	✔ Accepted assignment 0002183356--630cb78906f6833ac247a647 with answer
+"describes"
+2022-08-29 15:57:49	⚠ Rejected assignment 0002183356--630cb792dd4a291311d75bc5 with answer
+"A names B"
+2022-08-29 15:57:50	✔ Accepted assignment 0002183356--630cb7927cfaf02096004c33 with answer
+"is a name of"
+2022-08-29 15:57:51	✔ Accepted assignment 0002183356--630cb7a7e3a4854c648d4017 with answer
+"A is the class of B"
+2022-08-29 15:57:51	✔ Accepted assignment 0002183356--630cb7a1857d4243e7c7f19d with answer
+"describes"
+2022-08-29 15:57:53	✔ Accepted assignment 0002183356--630cb7977a82c771752203ec with answer
+"part B is the title"
+2022-08-29 15:57:53	✔ Accepted assignment 0002183356--630cb79a8a58084471995697 with answer
+"Names"
+2022-08-29 15:57:54	⚠ Rejected assignment 0002183356--630cb7b365b2cc1fa7fb189f with answer
+"A names B"
+2022-08-29 15:57:55	✔ Accepted assignment 0002183356--630cb7b19d444055d6917510 with answer
+"describes"
+2022-08-29 15:57:57	⚠ Rejected assignment 0002183356--630cb7c0735ccd0e800f9076 with answer
+"A names B"
+2022-08-29 15:57:58	⚠ Rejected assignment 0002183356--630cb7736c7e504027a46b7a with answer
+"A"
+2022-08-29 15:57:58	ℹ Pool describe_relations is now 58% complete ...
+2022-08-29 15:58:25	✔ Accepted assignment 0002183356--630cb7bf4fd1d555930c1dc2 with answer
+"part B is the smoke from the volcano"
+2022-08-29 15:58:26	✔ Accepted assignment 0002183356--630cb785e371414f3276dbea with answer
+"stem"
+2022-08-29 15:58:27	✔ Accepted assignment 0002183356--630cb7b98a5808447199585a with answer
+"describes"
+2022-08-29 15:58:28	✔ Accepted assignment 0002183356--630cb7c1dd4a291311d76001 with answer
+"describes"
+2022-08-29 15:58:29	✔ Accepted assignment 0002183356--630cb796d317946b2c1934e9 with answer
+"Effecting"
+2022-08-29 15:58:30	✔ Accepted assignment 0002183356--630cb7d27163075590055181 with answer
+"part B is a dinosaur skeleton"
+2022-08-29 15:58:31	✔ Accepted assignment 0002183356--630cb7d7e3a4854c648d4415 with answer
+"is a class of"
+2022-08-29 15:58:32	✔ Accepted assignment 0002183356--630cb7d318ad0d3f5be5399c with answer
+"describes"
+2022-08-29 15:58:33	ℹ Pool describe_relations is now 59% complete ...
+2022-08-29 15:58:54	ℹ Pool describe_relations is now 60% complete ...
+2022-08-29 15:59:11	✔ Accepted assignment 0002183356--630cb726a217e87efecd2b3e with answer
+"is the common name of"
+2022-08-29 15:59:12	✔ Accepted assignment 0002183356--630cb7e76c7e504027a4733c with answer
+"names"
+2022-08-29 15:59:13	⚠ Rejected assignment 0002183356--630cb7e665b2cc1fa7fb1cac with answer
+"part of the moon"
+2022-08-29 15:59:14	✔ Accepted assignment 0002183356--630cb7f2d317946b2c193b3e with answer
+"describes"
+2022-08-29 15:59:15	✔ Accepted assignment 0002183356--630cb7ec9d444055d6917929 with answer
+"describes"
+2022-08-29 15:59:16	⚠ Rejected assignment 0002183356--630cb7caa1d5dd12f4347cb6 with answer
+"A names B"
+2022-08-29 15:59:17	✔ Accepted assignment 0002183356--630cb7f7862f3f043a200afd with answer
+"part B is the river bank"
+2022-08-29 15:59:18	✔ Accepted assignment 0002183356--630cb7559d444055d6916dde with answer
+"is the class of"
+2022-08-29 15:59:19	⚠ Rejected assignment 0002183356--630cb7d87cfaf02096005109 with answer
+"Inside"
+2022-08-29 15:59:19	✔ Accepted assignment 0002183356--630cb80716b73f29c21584c9 with answer
+"A is the class of B"
+2022-08-29 15:59:20	✔ Accepted assignment 0002183356--630cb7cb31e5d6109f85b58f with answer
+"names"
+2022-08-29 15:59:21	✔ Accepted assignment 0002183356--630cb7f16c7e504027a473ac with answer
+"labels"
+2022-08-29 15:59:22	✔ Accepted assignment 0002183356--630cb8116c7e504027a475e5 with answer
+"A is the class of B"
+2022-08-29 15:59:23	✔ Accepted assignment 0002183356--630cb80fc459f02a1a1d2eec with answer
+"Names"
+2022-08-29 15:59:23	ℹ Pool describe_relations is now 61% complete ...
+2022-08-29 15:59:40	✔ Accepted assignment 0002183356--630cb81ce09bfb3537b5f196 with answer
+"A is the class of B"
+2022-08-29 15:59:40	✔ Accepted assignment 0002183356--630cb82441dc1350f7e8d928 with answer
+"names"
+2022-08-29 15:59:42	✔ Accepted assignment 0002183356--630cb7fea1d5dd12f4347f61 with answer
+"is the the common name of"
+2022-08-29 15:59:42	ℹ Pool describe_relations is now 62% complete ...
+2022-08-29 16:00:03	ℹ Pool describe_relations is now 63% complete ...
+2022-08-29 16:00:19	✔ Accepted assignment 0002183356--630cb70c3cd1d43971fd7891 with answer
+"describes natural phenomenon on"
+2022-08-29 16:00:20	✔ Accepted assignment 0002183356--630cb81eb5470b3f336add26 with answer
+"part B is an insect"
+2022-08-29 16:00:21	⚠ Rejected assignment 0002183356--630cb81fa05be7308d49d96f with answer
+"Growth"
+2022-08-29 16:00:22	⚠ Rejected assignment 0002183356--630cb8347cfaf02096005793 with answer
+"A names B"
+2022-08-29 16:00:23	✔ Accepted assignment 0002183356--630cb76fd317946b2c1932c6 with answer
+"names"
+2022-08-29 16:00:24	✔ Accepted assignment 0002183356--630cb78fe3a4854c648d3e04 with answer
+"is a class of"
+2022-08-29 16:00:25	✔ Accepted assignment 0002183356--630cb8397268a7548cadfcd5 with answer
+"names"
+2022-08-29 16:00:26	⚠ Rejected assignment 0002183356--630cb83db8d27e33eb6d82b6 with answer
+"Namea"
+2022-08-29 16:00:27	⚠ Rejected assignment 0002183356--630cb84031e5d6109f85ba70 with answer
+"A names B"
+2022-08-29 16:00:29	✔ Accepted assignment 0002183356--630cb83a4fd1d555930c255a with answer
+"describes"
+2022-08-29 16:00:30	⚠ Rejected assignment 0002183356--630cb7d52c38525b06a66537 with answer
+"temperature"
+2022-08-29 16:00:31	⚠ Rejected assignment 0002183356--630cb84ba22771012dbb38eb with answer
+"A names B"
+2022-08-29 16:00:32	✔ Accepted assignment 0002183356--630cb84ddd4a291311d768df with answer
+"names"
+2022-08-29 16:00:34	✔ Accepted assignment 0002183356--630cb847af3ebb2727bc7d30 with answer
+"describes"
+2022-08-29 16:00:35	✔ Accepted assignment 0002183356--630cb857fd123c3cf9f0fb34 with answer
+"names"
+2022-08-29 16:00:35	✔ Accepted assignment 0002183356--630cb79ca05be7308d49ce0f with answer
+"describes"
+2022-08-29 16:00:36	ℹ Pool describe_relations is now 64% complete ...
+2022-08-29 16:00:53	✔ Accepted assignment 0002183356--630cb84ac459f02a1a1d30ff with answer
+"Bones"
+2022-08-29 16:00:54	⚠ Rejected assignment 0002183356--630cb85616b73f29c2158aa1 with answer
+"A names B"
+2022-08-29 16:00:55	✔ Accepted assignment 0002183356--630cb80565b2cc1fa7fb1eea with answer
+"described by"
+2022-08-29 16:00:57	⚠ Rejected assignment 0002183356--630cb865b8d27e33eb6d85a8 with answer
+"A names B"
+2022-08-29 16:00:57	✔ Accepted assignment 0002183356--630cb83db5470b3f336ade80 with answer
+"marks"
+2022-08-29 16:00:58	✔ Accepted assignment 0002183356--630cb86d7268a7548cae01a0 with answer
+"A is the class of B"
+2022-08-29 16:00:58	ℹ Pool describe_relations is now 65% complete ...
+2022-08-29 16:01:16	ℹ Pool describe_relations is now 65% complete ...
+2022-08-29 16:01:33	✔ Accepted assignment 0002183356--630cb864a22771012dbb3c0b with answer
+"gives information about"
+2022-08-29 16:01:34	✔ Accepted assignment 0002183356--630cb85a41dc1350f7e8dc1e with answer
+"describes"
+2022-08-29 16:01:35	✔ Accepted assignment 0002183356--630cb87a7163075590055b15 with answer
+"A is the class of B"
+2022-08-29 16:01:36	✔ Accepted assignment 0002183356--630cb844a1d5dd12f4348401 with answer
+"gives information about"
+2022-08-29 16:01:37	✔ Accepted assignment 0002183356--630cb88ae3a4854c648d535b with answer
+"A is the class of B"
+2022-08-29 16:01:37	✔ Accepted assignment 0002183356--630cb88a3cd1d43971fd92c0 with answer
+"labels"
+2022-08-29 16:01:38	✔ Accepted assignment 0002183356--630cb8113cd1d43971fd8b32 with answer
+"names"
+2022-08-29 16:01:39	✔ Accepted assignment 0002183356--630cb88541dc1350f7e8de3a with answer
+"describes"
+2022-08-29 16:01:40	✔ Accepted assignment 0002183356--630cb74ae3a4854c648d38ae with answer
+"B shows A"
+2022-08-29 16:01:41	✔ Accepted assignment 0002183356--630cb8823cd1d43971fd9243 with answer
+"Hairs"
+2022-08-29 16:01:42	✔ Accepted assignment 0002183356--630cb898a1a4ab631726a477 with answer
+"describes"
+2022-08-29 16:01:42	ℹ Pool describe_relations is now 66% complete ...
+2022-08-29 16:01:59	✔ Accepted assignment 0002183356--630cb84ef08fdf14c5fcbbc4 with answer
+"waters"
+2022-08-29 16:02:00	✔ Accepted assignment 0002183356--630cb8a9a06b2575d886d7c4 with answer
+"Types"
+2022-08-29 16:02:01	✔ Accepted assignment 0002183356--630cb83b22c8e90d72c8392a with answer
+"part B is the core"
+2022-08-29 16:02:02	✔ Accepted assignment 0002183356--630cb89c22c8e90d72c83fae with answer
+"describes"
+2022-08-29 16:02:02	✔ Accepted assignment 0002183356--630cb88b7cfaf02096005d68 with answer
+"describes the position of"
+2022-08-29 16:02:04	✔ Accepted assignment 0002183356--630cb89d7cfaf02096005e7c with answer
+"names"
+2022-08-29 16:02:04	✔ Accepted assignment 0002183356--630cb896fd123c3cf9f10002 with answer
+"A is the class of B"
+2022-08-29 16:02:05	✔ Accepted assignment 0002183356--630cb8b3e371414f3276f18b with answer
+"part B is fish roe"
+2022-08-29 16:02:06	ℹ Pool describe_relations is now 68% complete ...
+2022-08-29 16:02:25	ℹ Pool describe_relations is now 69% complete ...
+2022-08-29 16:02:42	⚠ Rejected assignment 0002183356--630cb8b2ff8f302e2d979e13 with answer
+"Reproduction"
+2022-08-29 16:02:43	✔ Accepted assignment 0002183356--630cb8b80b55c35e8cb1bd4e with answer
+"names"
+2022-08-29 16:02:44	⚠ Rejected assignment 0002183356--630cb8c031e5d6109f85bfd7 with answer
+"A names B"
+2022-08-29 16:02:45	✔ Accepted assignment 0002183356--630cb8970b55c35e8cb1bbf6 with answer
+"describes"
+2022-08-29 16:02:46	✔ Accepted assignment 0002183356--630cb8b4e371414f3276f1a3 with answer
+"describes"
+2022-08-29 16:02:48	⚠ Rejected assignment 0002183356--630cb8c8ff8f302e2d979f5c with answer
+"A names B"
+2022-08-29 16:02:49	⚠ Rejected assignment 0002183356--630cb8784fd1d555930c2a76 with answer
+"Это Луна вокруг Земли и ее тень в разную фазу"
+2022-08-29 16:02:50	⚠ Rejected assignment 0002183356--630cb8d2a1d5dd12f4348e1c with answer
+"A names B"
+2022-08-29 16:02:51	✔ Accepted assignment 0002183356--630cb8c77163075590056023 with answer
+"Insect"
+2022-08-29 16:02:51	✔ Accepted assignment 0002183356--630cb8ab16b73f29c21590b5 with answer
+"labels"
+2022-08-29 16:02:53	⚠ Rejected assignment 0002183356--630cb8d9b058a31c8d17f0d0 with answer
+"A names B"
+2022-08-29 16:02:54	✔ Accepted assignment 0002183356--630cb8dc31e5d6109f85c0af with answer
+"names"
+2022-08-29 16:02:55	✔ Accepted assignment 0002183356--630cb8dafd123c3cf9f10597 with answer
+"Types"
+2022-08-29 16:02:55	ℹ Pool describe_relations is now 69% complete ...
+2022-08-29 16:03:12	ℹ Pool describe_relations is now 70% complete ...
+2022-08-29 16:03:29	✔ Accepted assignment 0002183356--630cb8d23cd1d43971fd97d2 with answer
+"names"
+2022-08-29 16:03:30	✔ Accepted assignment 0002183356--630cb8b365b2cc1fa7fb2aae with answer
+"fed"
+2022-08-29 16:03:31	✔ Accepted assignment 0002183356--630cb8e20b55c35e8cb1bf06 with answer
+"describes"
+2022-08-29 16:03:31	✔ Accepted assignment 0002183356--630cb8f2fd123c3cf9f106f2 with answer
+"names"
+2022-08-29 16:03:32	✔ Accepted assignment 0002183356--630cb8eb31e5d6109f85c180 with answer
+"names"
+2022-08-29 16:03:34	⚠ Rejected assignment 0002183356--630cb8d741dc1350f7e8e3c0 with answer
+"Это полная Луна красным обведена"
+2022-08-29 16:03:34	✔ Accepted assignment 0002183356--630cb8c716b73f29c21592dd with answer
+"describes"
+2022-08-29 16:03:35	✔ Accepted assignment 0002183356--630cb8c6e371414f3276f2e6 with answer
+"part B is the core of the sun"
+2022-08-29 16:03:36	✔ Accepted assignment 0002183356--630cb850a1d5dd12f4348469 with answer
+"is a class of"
+2022-08-29 16:03:37	✔ Accepted assignment 0002183356--630cb8f916b73f29c2159660 with answer
+"describes"
+2022-08-29 16:03:38	⚠ Rejected assignment 0002183356--630cb8efb058a31c8d17f27d with answer
+"Size"
+2022-08-29 16:03:39	✔ Accepted assignment 0002183356--630cb90218ad0d3f5be54f02 with answer
+"describes"
+2022-08-29 16:03:40	✔ Accepted assignment 0002183356--630cb9023cd1d43971fd9a2f with answer
+"names"
+2022-08-29 16:03:41	⚠ Rejected assignment 0002183356--630cb8fe18ad0d3f5be54ec3 with answer
+"decribes"
+2022-08-29 16:03:41	ℹ Pool describe_relations is now 71% complete ...
+2022-08-29 16:03:58	✔ Accepted assignment 0002183356--630cb911a1d5dd12f43493ab with answer
+"Revolving"
+2022-08-29 16:03:59	✔ Accepted assignment 0002183356--630cb911a1d5dd12f43493a4 with answer
+"describes"
+2022-08-29 16:04:00	✔ Accepted assignment 0002183356--630cb91c4fd1d555930c3959 with answer
+"names"
+2022-08-29 16:04:01	⚠ Rejected assignment 0002183356--630cb91d7268a7548cae11d1 with answer
+"decribes"
+2022-08-29 16:04:02	✔ Accepted assignment 0002183356--630cb918a05be7308d49ea6d with answer
+"part B is an insect"
+2022-08-29 16:04:03	ℹ Pool describe_relations is now 71% complete ...
+2022-08-29 16:04:20	ℹ Pool describe_relations is now 72% complete ...
+2022-08-29 16:04:37	⚠ Rejected assignment 0002183356--630cb929dd4a291311d77750 with answer
+"Human body"
+2022-08-29 16:04:38	⚠ Rejected assignment 0002183356--630cb933a22771012dbb4f73 with answer
+"decribes"
+2022-08-29 16:04:39	✔ Accepted assignment 0002183356--630cb92aff8f302e2d97a455 with answer
+"describes"
+2022-08-29 16:04:41	✔ Accepted assignment 0002183356--630cb92fdd4a291311d777a5 with answer
+"names"
+2022-08-29 16:04:41	✔ Accepted assignment 0002183356--630cb9057268a7548cae0f77 with answer
+"names"
+2022-08-29 16:04:42	⚠ Rejected assignment 0002183356--630cb93eb5470b3f336aee85 with answer
+"Chain"
+2022-08-29 16:04:43	✔ Accepted assignment 0002183356--630cb91ed317946b2c1950e4 with answer
+"gives information about"
+2022-08-29 16:04:44	⚠ Rejected assignment 0002183356--630cb90de371414f3276f7c6 with answer
+"the form"
+2022-08-29 16:04:45	✔ Accepted assignment 0002183356--630cb941a06b2575d886e10f with answer
+"describes"
+2022-08-29 16:04:46	✔ Accepted assignment 0002183356--630cb94ae2b7aa2ff74f225b with answer
+"is a name of"
+2022-08-29 16:04:47	✔ Accepted assignment 0002183356--630cb947a06b2575d886e187 with answer
+"describes"
+2022-08-29 16:04:47	ℹ Pool describe_relations is now 73% complete ...
+2022-08-29 16:05:04	✔ Accepted assignment 0002183356--630cb8724fd1d555930c29f0 with answer
+"describes"
+2022-08-29 16:05:05	✔ Accepted assignment 0002183356--630cb95d65b2cc1fa7fb3544 with answer
+"describes"
+2022-08-29 16:05:06	⚠ Rejected assignment 0002183356--630cb95ee2b7aa2ff74f2442 with answer
+"in the class of"
+2022-08-29 16:05:07	✔ Accepted assignment 0002183356--630cb95e18ad0d3f5be55502 with answer
+"describes"
+2022-08-29 16:05:08	✔ Accepted assignment 0002183356--630cb96818ad0d3f5be555e4 with answer
+"names"
+2022-08-29 16:05:08	✔ Accepted assignment 0002183356--630cb938e371414f3276f98a with answer
+"part B is the words in the diagram"
+2022-08-29 16:05:09	⚠ Rejected assignment 0002183356--630cb95aff8f302e2d97a705 with answer
+"reaction"
+2022-08-29 16:05:10	✔ Accepted assignment 0002183356--630cb956af3ebb2727bc9619 with answer
+"describes"
+2022-08-29 16:05:10	ℹ Pool describe_relations is now 74% complete ...
+2022-08-29 16:05:28	ℹ Pool describe_relations is now 75% complete ...
+2022-08-29 16:05:45	✔ Accepted assignment 0002183356--630cb80c0b55c35e8cb1b1dd with answer
+"is the class of"
+2022-08-29 16:05:46	⚠ Rejected assignment 0002183356--630cb974a22771012dbb5498 with answer
+"decribes"
+2022-08-29 16:05:47	✔ Accepted assignment 0002183356--630cb861b058a31c8d17e6fe with answer
+"contains"
+2022-08-29 16:05:48	✔ Accepted assignment 0002183356--630cb9526c7e504027a48fc7 with answer
+"names"
+2022-08-29 16:05:50	✔ Accepted assignment 0002183356--630cb976af3ebb2727bc9883 with answer
+"described by"
+2022-08-29 16:05:51	✔ Accepted assignment 0002183356--630cb98518ad0d3f5be55796 with answer
+"NAMES"
+2022-08-29 16:05:52	⚠ Rejected assignment 0002183356--630cb97a7a82c77175221e7c with answer
+"organism"
+2022-08-29 16:05:53	✔ Accepted assignment 0002183356--630cb97e56571b7ed0cf8ea7 with answer
+"describes"
+2022-08-29 16:05:54	✔ Accepted assignment 0002183356--630cb989dd4a291311d77d5b with answer
+"names"
+2022-08-29 16:05:55	⚠ Rejected assignment 0002183356--630cb9870b55c35e8cb1c73a with answer
+"decribes"
+2022-08-29 16:05:56	✔ Accepted assignment 0002183356--630cb992e2b7aa2ff74f2554 with answer
+"NAMES"
+2022-08-29 16:05:57	✔ Accepted assignment 0002183356--630cb9974fd1d555930c42a2 with answer
+"describes"
+2022-08-29 16:05:59	⚠ Rejected assignment 0002183356--630cb9583cd1d43971fd9fa3 with answer
+"venation"
+2022-08-29 16:05:59	ℹ Pool describe_relations is now 75% complete ...
+2022-08-29 16:06:18	ℹ Pool describe_relations is now 77% complete ...
+2022-08-29 16:06:35	⚠ Rejected assignment 0002183356--630cb995735ccd0e800fa215 with answer
+"Plrd"
+2022-08-29 16:06:36	✔ Accepted assignment 0002183356--630cb9787cfaf02096006d3c with answer
+"part B is the image of the sun on the diagram"
+2022-08-29 16:06:36	✔ Accepted assignment 0002183356--630cb98318ad0d3f5be55782 with answer
+"describes"
+2022-08-29 16:06:38	⚠ Rejected assignment 0002183356--630cb999f08fdf14c5fcd314 with answer
+"decribes"
+2022-08-29 16:06:39	✔ Accepted assignment 0002183356--630cb9a4b058a31c8d17fe24 with answer
+"IS A PART OF"
+2022-08-29 16:06:40	✔ Accepted assignment 0002183356--630cb9ab22c8e90d72c8534e with answer
+"plantations"
+2022-08-29 16:06:41	✔ Accepted assignment 0002183356--630cb9ab3cd1d43971fda49a with answer
+"describes"
+2022-08-29 16:06:42	⚠ Rejected assignment 0002183356--630cb95319eedd4475b4188d with answer
+"Growth"
+2022-08-29 16:06:43	⚠ Rejected assignment 0002183356--630cb9bbd317946b2c195b06 with answer
+"The soil"
+2022-08-29 16:06:44	✔ Accepted assignment 0002183356--630cb9b97a82c77175222148 with answer
+"DESCRIBES"
+2022-08-29 16:06:45	✔ Accepted assignment 0002183356--630cb9b3d317946b2c195a6b with answer
+"part B is the words next to the diagram"
+2022-08-29 16:06:45	⚠ Rejected assignment 0002183356--630cb9c665b2cc1fa7fb3bbe with answer
+"Orbit"
+2022-08-29 16:06:46	✔ Accepted assignment 0002183356--630cb9c565b2cc1fa7fb3bad with answer
+"describes"
+2022-08-29 16:06:46	ℹ Pool describe_relations is now 77% complete ...
+2022-08-29 16:07:09	ℹ Pool describe_relations is now 78% complete ...
+2022-08-29 16:07:26	✔ Accepted assignment 0002183356--630cb9c41dc9cc628019657f with answer
+"describes"
+2022-08-29 16:07:27	✔ Accepted assignment 0002183356--630cb9a56c7e504027a494f1 with answer
+"gives information about"
+2022-08-29 16:07:28	✔ Accepted assignment 0002183356--630cb9b3b8d27e33eb6dac42 with answer
+"insects"
+2022-08-29 16:07:29	✔ Accepted assignment 0002183356--630cb998e3a4854c648d6848 with answer
+"names"
+2022-08-29 16:07:30	✔ Accepted assignment 0002183356--630cb9d83cd1d43971fda768 with answer
+"names"
+2022-08-29 16:07:31	⚠ Rejected assignment 0002183356--630cb9d119eedd4475b42802 with answer
+"eruption"
+2022-08-29 16:07:32	✔ Accepted assignment 0002183356--630cb9e1a1a4ab631726bf29 with answer
+"names"
+2022-08-29 16:07:32	✔ Accepted assignment 0002183356--630cb9c5a1d5dd12f4349eac with answer
+"Shapes"
+2022-08-29 16:07:33	✔ Accepted assignment 0002183356--630cb9dcfd123c3cf9f11563 with answer
+"describes"
+2022-08-29 16:07:34	✔ Accepted assignment 0002183356--630cb9ea22c8e90d72c857ab with answer
+"describes"
+2022-08-29 16:07:35	✔ Accepted assignment 0002183356--630cb9f2a06b2575d886ed2f with answer
+"names"
+2022-08-29 16:07:37	⚠ Rejected assignment 0002183356--630cb9f193220d47e7b5e886 with answer
+"Chain"
+2022-08-29 16:07:38	✔ Accepted assignment 0002183356--630cb911af3ebb2727bc9014 with answer
+"is a class of"
+2022-08-29 16:07:39	⚠ Rejected assignment 0002183356--630cb992e3a4854c648d67bf with answer
+"A names B"
+2022-08-29 16:07:40	✔ Accepted assignment 0002183356--630cb9f4e3a4854c648d714a with answer
+"describes"
+2022-08-29 16:07:41	✔ Accepted assignment 0002183356--630cb9eab5470b3f336af91d with answer
+"names"
+2022-08-29 16:07:41	ℹ Pool describe_relations is now 79% complete ...
+2022-08-29 16:07:58	✔ Accepted assignment 0002183356--630cb985fd123c3cf9f110d1 with answer
+"B is a part of A"
+2022-08-29 16:08:00	⚠ Rejected assignment 0002183356--630cb9ea19eedd4475b42a66 with answer
+"Life cycle"
+2022-08-29 16:08:01	✔ Accepted assignment 0002183356--630cba0da22771012dbb6341 with answer
+"names"
+2022-08-29 16:08:02	✔ Accepted assignment 0002183356--630cb9f34fd1d555930c4a7b with answer
+"contains"
+2022-08-29 16:08:03	✔ Accepted assignment 0002183356--630cba186c7e504027a49d51 with answer
+"names"
+2022-08-29 16:08:04	⚠ Rejected assignment 0002183356--630cb9e3a05be7308d49f99c with answer
+"bud"
+2022-08-29 16:08:05	✔ Accepted assignment 0002183356--630cb9d07268a7548cae240c with answer
+"part B is a bird"
+2022-08-29 16:08:05	✔ Accepted assignment 0002183356--630cba0b6c7e504027a49c26 with answer
+"describes"
+2022-08-29 16:08:05	ℹ Pool describe_relations is now 80% complete ...
+2022-08-29 16:08:23	ℹ Pool describe_relations is now 81% complete ...
+2022-08-29 16:08:40	⚠ Rejected assignment 0002183356--630cba0556571b7ed0cf94a0 with answer
+"A names B"
+2022-08-29 16:08:40	⚠ Rejected assignment 0002183356--630cba18a06b2575d886ef32 with answer
+"Electrical circuit"
+2022-08-29 16:08:41	✔ Accepted assignment 0002183356--630cb98522c8e90d72c85054 with answer
+"describes"
+2022-08-29 16:08:42	✔ Accepted assignment 0002183356--630cba1cf08fdf14c5fce26c with answer
+"is the name of"
+2022-08-29 16:08:43	⚠ Rejected assignment 0002183356--630cba24fd123c3cf9f11a62 with answer
+"stage"
+2022-08-29 16:08:44	✔ Accepted assignment 0002183356--630cba27a1d5dd12f434a65a with answer
+"describes"
+2022-08-29 16:08:45	✔ Accepted assignment 0002183356--630cb98afd123c3cf9f1113f with answer
+"is the drag for support healthy functioning of"
+2022-08-29 16:08:46	⚠ Rejected assignment 0002183356--630cb9ffa217e87efecd4f3f with answer
+"Iner side of earth"
+2022-08-29 16:08:46	✔ Accepted assignment 0002183356--630cba39b8d27e33eb6dbab9 with answer
+"describes"
+2022-08-29 16:08:47	✔ Accepted assignment 0002183356--630cb9f6a1a4ab631726c046 with answer
+"names"
+2022-08-29 16:08:48	✔ Accepted assignment 0002183356--630cba381dc9cc628019693f with answer
+"names"
+2022-08-29 16:08:49	⚠ Rejected assignment 0002183356--630cba3c16b73f29c215aea9 with answer
+"decribes"
+2022-08-29 16:08:51	✔ Accepted assignment 0002183356--630cba2f7268a7548cae3075 with answer
+"A is the of B"
+2022-08-29 16:08:51	✔ Accepted assignment 0002183356--630cb854dd4a291311d7695c with answer
+"describes the position of"
+2022-08-29 16:08:53	⚠ Rejected assignment 0002183356--630cba3c0b55c35e8cb1d048 with answer
+"battery"
+2022-08-29 16:08:53	✔ Accepted assignment 0002183356--630cb9c819eedd4475b4272e with answer
+"defines"
+2022-08-29 16:08:54	✔ Accepted assignment 0002183356--630cba4b16b73f29c215af57 with answer
+"names"
+2022-08-29 16:08:55	✔ Accepted assignment 0002183356--630cba4a7268a7548cae341d with answer
+"names"
+2022-08-29 16:08:55	ℹ Pool describe_relations is now 82% complete ...
+2022-08-29 16:09:12	ℹ Pool describe_relations is now 84% complete ...
+2022-08-29 16:09:29	✔ Accepted assignment 0002183356--630cba3fd317946b2c1965e4 with answer
+"describes"
+2022-08-29 16:09:30	⚠ Rejected assignment 0002183356--630cba46e371414f32770b03 with answer
+"Namea"
+2022-08-29 16:09:30	✔ Accepted assignment 0002183356--630cba4341dc1350f7e8f67e with answer
+"names"
+2022-08-29 16:09:32	✔ Accepted assignment 0002183356--630cba4e16b73f29c215af78 with answer
+"names"
+2022-08-29 16:09:33	⚠ Rejected assignment 0002183356--630cba533b6795124fc79a4e with answer
+"earth"
+2022-08-29 16:09:34	✔ Accepted assignment 0002183356--630cba25d317946b2c19636f with answer
+"part B is an image of the planet earth"
+2022-08-29 16:09:35	✔ Accepted assignment 0002183356--630cba16a217e87efecd50e0 with answer
+"B is a part of A"
+2022-08-29 16:09:36	⚠ Rejected assignment 0002183356--630cba5b7cfaf02096007e76 with answer
+"decribes"
+2022-08-29 16:09:37	⚠ Rejected assignment 0002183356--630cba3a7a82c77175222b85 with answer
+"fish family"
+2022-08-29 16:09:38	✔ Accepted assignment 0002183356--630cba5b31e5d6109f85d43a with answer
+"fish"
+2022-08-29 16:09:39	⚠ Rejected assignment 0002183356--630cba58fd123c3cf9f11e39 with answer
+"Evaporation"
+2022-08-29 16:09:41	✔ Accepted assignment 0002183356--630cba5ae3a4854c648d7b15 with answer
+"contains"
+2022-08-29 16:09:42	✔ Accepted assignment 0002183356--630cba553b6795124fc79a7d with answer
+"names"
+2022-08-29 16:09:43	✔ Accepted assignment 0002183356--630cba590b55c35e8cb1d2ed with answer
+"describes"
+2022-08-29 16:09:44	✔ Accepted assignment 0002183356--630cba52862f3f043a201f0d with answer
+"A is the class of B"
+2022-08-29 16:09:45	✔ Accepted assignment 0002183356--630cba6ba22771012dbb6b8f with answer
+"describes"
+2022-08-29 16:09:46	✔ Accepted assignment 0002183356--630cba5b3b6795124fc79afc with answer
+"names"
+2022-08-29 16:09:47	⚠ Rejected assignment 0002183356--630cba77dd4a291311d78c9f with answer
+"A names B"
+2022-08-29 16:09:48	✔ Accepted assignment 0002183356--630cba628a58084471998658 with answer
+"names"
+2022-08-29 16:09:48	✔ Accepted assignment 0002183356--630cba52ff8f302e2d97b9b4 with answer
+"names"
+2022-08-29 16:09:49	ℹ Pool describe_relations is now 85% complete ...
+2022-08-29 16:10:06	✔ Accepted assignment 0002183356--630cba7122c8e90d72c8606e with answer
+"described by"
+2022-08-29 16:10:06	✔ Accepted assignment 0002183356--630cba81af3ebb2727bcaf4d with answer
+"names"
+2022-08-29 16:10:08	⚠ Rejected assignment 0002183356--630cba74a06b2575d886f43f with answer
+"the sun"
+2022-08-29 16:10:08	✔ Accepted assignment 0002183356--630cba5ba05be7308d4a027e with answer
+"names"
+2022-08-29 16:10:10	✔ Accepted assignment 0002183356--630cba507268a7548cae34ab with answer
+"names"
+2022-08-29 16:10:10	✔ Accepted assignment 0002183356--630cba79ef591d16ede71447 with answer
+"describes"
+2022-08-29 16:10:11	✔ Accepted assignment 0002183356--630cba86a06b2575d886f56c with answer
+"names"
+2022-08-29 16:10:12	✔ Accepted assignment 0002183356--630cba897cfaf020960083a2 with answer
+"names"
+2022-08-29 16:10:13	⚠ Rejected assignment 0002183356--630cba89e371414f32770f03 with answer
+"homyhoof"
+2022-08-29 16:10:15	⚠ Rejected assignment 0002183356--630cba86f08fdf14c5fce9ac with answer
+"A names B"
+2022-08-29 16:10:16	✔ Accepted assignment 0002183356--630cb9fa9d444055d6919b85 with answer
+"names"
+2022-08-29 16:10:17	✔ Accepted assignment 0002183356--630cba68b5470b3f336b0117 with answer
+"part B is a picture of a berry on a table"
+2022-08-29 16:10:18	⚠ Rejected assignment 0002183356--630cba6b7a82c77175222fbf with answer
+"А"
+2022-08-29 16:10:19	✔ Accepted assignment 0002183356--630cba916c7e504027a4a6ab with answer
+"names"
+2022-08-29 16:10:20	✔ Accepted assignment 0002183356--630cba8e7cfaf02096008434 with answer
+"names"
+2022-08-29 16:10:21	⚠ Rejected assignment 0002183356--630cba91a217e87efecd55db with answer
+"A"
+2022-08-29 16:10:22	✔ Accepted assignment 0002183356--630cba91e3a4854c648d805d with answer
+"names"
+2022-08-29 16:10:23	⚠ Rejected assignment 0002183356--630cba9a7163075590057eb4 with answer
+"A"
+2022-08-29 16:10:24	✔ Accepted assignment 0002183356--630cba88a217e87efecd5525 with answer
+"names"
+2022-08-29 16:10:25	✔ Accepted assignment 0002183356--630cba8b7268a7548cae3abc with answer
+"names"
+2022-08-29 16:10:26	⚠ Rejected assignment 0002183356--630cba99fd123c3cf9f12270 with answer
+"В"
+2022-08-29 16:10:27	⚠ Rejected assignment 0002183356--630cba6b7268a7548cae3754 with answer
+"Nucleus"
+2022-08-29 16:10:28	⚠ Rejected assignment 0002183356--630cba733cd1d43971fdb150 with answer
+"1"
+2022-08-29 16:10:29	⚠ Rejected assignment 0002183356--630cbaa07cfaf020960085e0 with answer
+"A"
+2022-08-29 16:10:30	⚠ Rejected assignment 0002183356--630cba6eef591d16ede713bc with answer
+"Heat"
+2022-08-29 16:10:31	✔ Accepted assignment 0002183356--630cba95857d4243e7c821de with answer
+"A is the class of B"
+2022-08-29 16:10:33	✔ Accepted assignment 0002183356--630cba89e3a4854c648d7fb6 with answer
+"describes"
+2022-08-29 16:10:33	⚠ Rejected assignment 0002183356--630cbaa322c8e90d72c864a7 with answer
+"А"
+2022-08-29 16:10:35	✔ Accepted assignment 0002183356--630cba999d444055d691a579 with answer
+"polar bear"
+2022-08-29 16:10:35	✔ Accepted assignment 0002183356--630cba943cd1d43971fdb3c6 with answer
+"insects"
+2022-08-29 16:10:35	ℹ Pool describe_relations is now 88% complete ...
+2022-08-29 16:10:52	✔ Accepted assignment 0002183356--630cba9de371414f32770fd5 with answer
+"names"
+2022-08-29 16:10:54	⚠ Rejected assignment 0002183356--630cbaa6a22771012dbb71db with answer
+"A names B"
+2022-08-29 16:10:55	⚠ Rejected assignment 0002183356--630cbaa94fd1d555930c56d7 with answer
+"А"
+2022-08-29 16:10:56	✔ Accepted assignment 0002183356--630cbaa7a05be7308d4a06a7 with answer
+"climate change"
+2022-08-29 16:10:58	⚠ Rejected assignment 0002183356--630cba9ca1a4ab631726ce2c with answer
+"Yes"
+2022-08-29 16:10:59	✔ Accepted assignment 0002183356--630cbaa019eedd4475b43ce8 with answer
+"names"
+2022-08-29 16:11:00	⚠ Rejected assignment 0002183356--630cbaa1a22771012dbb70f0 with answer
+"a"
+2022-08-29 16:11:01	⚠ Rejected assignment 0002183356--630cbaabb8d27e33eb6dc38d with answer
+"piseivorous fish"
+2022-08-29 16:11:03	✔ Accepted assignment 0002183356--630cbaa00b55c35e8cb1d7ea with answer
+"names"
+2022-08-29 16:11:04	✔ Accepted assignment 0002183356--630cbaa2b8d27e33eb6dc322 with answer
+"names"
+2022-08-29 16:11:04	✔ Accepted assignment 0002183356--630cba8cd317946b2c196bb8 with answer
+"They both represent same body part"
+2022-08-29 16:11:06	⚠ Rejected assignment 0002183356--630cba9d65b2cc1fa7fb4b64 with answer
+"B"
+2022-08-29 16:11:07	⚠ Rejected assignment 0002183356--630cbaaac459f02a1a1d494b with answer
+"Water"
+2022-08-29 16:11:08	⚠ Rejected assignment 0002183356--630cba70c459f02a1a1d4713 with answer
+"whole dinosaur for a spare part?"
+2022-08-29 16:11:09	✔ Accepted assignment 0002183356--630cbaad7268a7548cae3d96 with answer
+"fish"
+2022-08-29 16:11:10	⚠ Rejected assignment 0002183356--630cba9f56571b7ed0cf9d8a with answer
+"A"
+2022-08-29 16:11:11	⚠ Rejected assignment 0002183356--630cbab0921d0c42d3dc496a with answer
+"Description"
+2022-08-29 16:11:12	⚠ Rejected assignment 0002183356--630cbab8e3a4854c648d843d with answer
+"b"
+2022-08-29 16:11:12	✔ Accepted assignment 0002183356--630cba9a7268a7548cae3bb0 with answer
+"names"
+2022-08-29 16:11:13	✔ Accepted assignment 0002183356--630cba9da217e87efecd5727 with answer
+"part B is a picture of a fruit"
+2022-08-29 16:11:14	⚠ Rejected assignment 0002183356--630cba7ee3a4854c648d7edf with answer
+"Growth"
+2022-08-29 16:11:15	✔ Accepted assignment 0002183356--630cb9fbdd4a291311d784f2 with answer
+"is the class of"
+2022-08-29 16:11:15	✔ Accepted assignment 0002183356--630cbaa619eedd4475b43d57 with answer
+"describes"
+2022-08-29 16:11:16	⚠ Rejected assignment 0002183356--630cbaa66c7e504027a4a7fe with answer
+"Zebra"
+2022-08-29 16:11:17	✔ Accepted assignment 0002183356--630cbaa3857d4243e7c822df with answer
+"A is the label or the one describing the illustration B."
+2022-08-29 16:11:18	⚠ Rejected assignment 0002183356--630cbabaa05be7308d4a07f5 with answer
+"A names B"
+2022-08-29 16:11:19	⚠ Rejected assignment 0002183356--630cba96af3ebb2727bcb171 with answer
+"обе рыбы"
+2022-08-29 16:11:20	✔ Accepted assignment 0002183356--630cba087268a7548cae2b33 with answer
+"is a class of"
+2022-08-29 16:11:21	⚠ Rejected assignment 0002183356--630cba99a05be7308d4a05af with answer
+"Compression "
+2022-08-29 16:11:21	✔ Accepted assignment 0002183356--630cbabd22c8e90d72c86960 with answer
+"names"
+2022-08-29 16:11:22	⚠ Rejected assignment 0002183356--630cbac28a58084471998ca7 with answer
+"Boon"
+2022-08-29 16:11:22	ℹ Pool describe_relations is now 91% complete ...
+2022-08-29 16:11:38	ℹ Pool describe_relations is now 91% complete ...
+2022-08-29 16:11:55	⚠ Rejected assignment 0002183356--630cbac041dc1350f7e8fa1f with answer
+"Depth"
+2022-08-29 16:11:57	⚠ Rejected assignment 0002183356--630cba9def591d16ede7161c with answer
+"Equinox"
+2022-08-29 16:11:58	⚠ Rejected assignment 0002183356--630cba917163075590057df1 with answer
+"Adult grasshopper "
+2022-08-29 16:11:59	✔ Accepted assignment 0002183356--630cbac6857d4243e7c82500 with answer
+"Images Very Amazing "
+2022-08-29 16:12:00	⚠ Rejected assignment 0002183356--630cbab606f6833ac247d10e with answer
+"homy hoof"
+2022-08-29 16:12:01	✔ Accepted assignment 0002183356--630cba8efd123c3cf9f121e8 with answer
+"seeds"
+2022-08-29 16:12:02	✔ Accepted assignment 0002183356--630cba9a6c7e504027a4a740 with answer
+"fruits"
+2022-08-29 16:12:03	⚠ Rejected assignment 0002183356--630cba6e7268a7548cae37a9 with answer
+"Leaf"
+2022-08-29 16:12:05	⚠ Rejected assignment 0002183356--630cba2506f6833ac247ca2c with answer
+"energy"
+2022-08-29 16:12:06	⚠ Rejected assignment 0002183356--630cbaaa4fd1d555930c56e3 with answer
+"Growth"
+2022-08-29 16:12:08	⚠ Rejected assignment 0002183356--630cbaa4e371414f32771017 with answer
+"The development life cycle of the rhino beetle."
+2022-08-29 16:12:09	⚠ Rejected assignment 0002183356--630cbae5a06b2575d886fb37 with answer
+"Digestive system "
+2022-08-29 16:12:11	⚠ Rejected assignment 0002183356--630cba92857d4243e7c821af with answer
+"growth"
+2022-08-29 16:12:12	⚠ Rejected assignment 0002183356--630cbac67268a7548cae41ad with answer
+"name"
+2022-08-29 16:12:14	⚠ Rejected assignment 0002183356--630cbab1dd4a291311d79004 with answer
+"Growth "
+2022-08-29 16:12:14	✔ Accepted assignment 0002183356--630cbaf6af3ebb2727bcba63 with answer
+"The Image Is Showing Towards the Very Good Element "
+2022-08-29 16:12:15	✔ Accepted assignment 0002183356--630cbaaab8d27e33eb6dc381 with answer
+"Animals food"
+2022-08-29 16:12:16	✔ Accepted assignment 0002183356--630cba6e4fd1d555930c5313 with answer
+"Shape"
+2022-08-29 16:12:17	⚠ Rejected assignment 0002183356--630cbafba1d5dd12f434b907 with answer
+"sea"
+2022-08-29 16:12:18	⚠ Rejected assignment 0002183356--630cbaeae3a4854c648d8924 with answer
+"First half"
+2022-08-29 16:12:20	⚠ Rejected assignment 0002183356--630cbaab93220d47e7b5edff with answer
+"Life cycle"
+2022-08-29 16:12:21	⚠ Rejected assignment 0002183356--630cbafe4fd1d555930c5b96 with answer
+"Filter"
+2022-08-29 16:12:22	✔ Accepted assignment 0002183356--630cbaa7e3a4854c648d830d with answer
+"names"
+2022-08-29 16:12:23	⚠ Rejected assignment 0002183356--630cba90d317946b2c196be8 with answer
+"A names B"
+2022-08-29 16:12:24	✔ Accepted assignment 0002183356--630cba6e3b6795124fc79c35 with answer
+"names"
+2022-08-29 16:12:24	ℹ Pool describe_relations is now 93% complete ...
+2022-08-29 16:12:41	⚠ Rejected assignment 0002183356--630cbae28a58084471998e15 with answer
+"Planet "
+2022-08-29 16:12:42	✔ Accepted assignment 0002183356--630cbaf516b73f29c215b949 with answer
+"The labeled grass"
+2022-08-29 16:12:44	⚠ Rejected assignment 0002183356--630cbb080b55c35e8cb1dbc5 with answer
+"Solar eclipse "
+2022-08-29 16:12:45	⚠ Rejected assignment 0002183356--630cbafbff8f302e2d97c307 with answer
+"growth"
+2022-08-29 16:12:46	⚠ Rejected assignment 0002183356--630cbb11ff8f302e2d97c407 with answer
+"Teglection"
+2022-08-29 16:12:47	✔ Accepted assignment 0002183356--630cbaa8e371414f32771047 with answer
+"These are the types of rocks found on earth surface "
+2022-08-29 16:12:48	✔ Accepted assignment 0002183356--630cba8793220d47e7b5ed3d with answer
+"describes"
+2022-08-29 16:12:49	⚠ Rejected assignment 0002183356--630cba9a857d4243e7c82215 with answer
+"date"
+2022-08-29 16:12:50	✔ Accepted assignment 0002183356--630cbaca862f3f043a20223c with answer
+"Names"
+2022-08-29 16:12:51	⚠ Rejected assignment 0002183356--630cbb027268a7548cae48a0 with answer
+"Ecosystem"
+2022-08-29 16:12:53	⚠ Rejected assignment 0002183356--630cbb27a1a4ab631726d833 with answer
+"name"
+2022-08-29 16:12:54	⚠ Rejected assignment 0002183356--630cba91a1a4ab631726cd47 with answer
+"animal cell"
+2022-08-29 16:12:55	✔ Accepted assignment 0002183356--630cbb1c93220d47e7b5f17e with answer
+"Labeled polar bear at the top of food chain"
+2022-08-29 16:12:56	✔ Accepted assignment 0002183356--630cbab9e371414f327710fa with answer
+"Sedimentary rocks"
+2022-08-29 16:12:57	⚠ Rejected assignment 0002183356--630cbb1eef591d16ede71d8d with answer
+"Size"
+2022-08-29 16:12:58	⚠ Rejected assignment 0002183356--630cba82a217e87efecd54e7 with answer
+"rock"
+2022-08-29 16:12:59	✔ Accepted assignment 0002183356--630cbb2a22c8e90d72c87530 with answer
+"Describes"
+2022-08-29 16:13:01	⚠ Rejected assignment 0002183356--630cbb200b55c35e8cb1dd4b with answer
+"Horny hoof"
+2022-08-29 16:13:02	⚠ Rejected assignment 0002183356--630cbb2f9d444055d691adda with answer
+"Earth"
+2022-08-29 16:13:03	⚠ Rejected assignment 0002183356--630cbb387268a7548cae501b with answer
+"name"
+2022-08-29 16:13:04	✔ Accepted assignment 0002183356--630cbb03857d4243e7c828da with answer
+"names"
+2022-08-29 16:13:05	⚠ Rejected assignment 0002183356--630cba8019eedd4475b439b8 with answer
+"The phases of the moon"
+2022-08-29 16:13:06	⚠ Rejected assignment 0002183356--630cbb3db5470b3f336b0c39 with answer
+"Adult"
+2022-08-29 16:13:06	ℹ Pool describe_relations is now 93% complete ...
+2022-08-29 16:13:23	✔ Accepted assignment 0002183356--630cbb37af3ebb2727bcc2df with answer
+"names"
+2022-08-29 16:13:24	⚠ Rejected assignment 0002183356--630cbb3d16b73f29c215bd96 with answer
+"Suze"
+2022-08-29 16:13:25	⚠ Rejected assignment 0002183356--630cbb3ba1a4ab631726d977 with answer
+"symbol of"
+2022-08-29 16:13:26	✔ Accepted assignment 0002183356--630cba9bc459f02a1a1d48b3 with answer
+"Precedes"
+2022-08-29 16:13:27	✔ Accepted assignment 0002183356--630cba81c459f02a1a1d47af with answer
+"consists"
+2022-08-29 16:13:28	✔ Accepted assignment 0002183356--630cbaac19eedd4475b43e08 with answer
+"describes"
+2022-08-29 16:13:29	✔ Accepted assignment 0002183356--630cbb4bff8f302e2d97c7b5 with answer
+"is the name of"
+2022-08-29 16:13:30	⚠ Rejected assignment 0002183356--630cbb26d317946b2c1974fe with answer
+"Showing the different ways of battery, wire and bulb connection "
+2022-08-29 16:13:31	⚠ Rejected assignment 0002183356--630cba723b6795124fc79c90 with answer
+"serial and parallel electrical wiring diagram"
+2022-08-29 16:13:32	⚠ Rejected assignment 0002183356--630cbb3ab5470b3f336b0c19 with answer
+"September 23 the autumnal  equinox of the eartg"
+2022-08-29 16:13:33	✔ Accepted assignment 0002183356--630cbae4a1a4ab631726d46d with answer
+"describes"
+2022-08-29 16:13:34	✔ Accepted assignment 0002183356--630cba93ff8f302e2d97bd75 with answer
+"names"
+2022-08-29 16:13:34	ℹ Pool describe_relations is now 93% complete ...
+2022-08-29 16:13:53	ℹ Pool describe_relations is now 93% complete ...
+2022-08-29 16:14:09	✔ Accepted assignment 0002183356--630cbb5ca217e87efecd5e0d with answer
+"contains"
+2022-08-29 16:14:10	✔ Accepted assignment 0002183356--630cbb771dc9cc6280197879 with answer
+"describes"
+2022-08-29 16:14:12	✔ Accepted assignment 0002183356--630cbb5de3a4854c648d9492 with answer
+"Provides"
+2022-08-29 16:14:13	⚠ Rejected assignment 0002183356--630cbafe65b2cc1fa7fb519d with answer
+"Solar eclipse"
+2022-08-29 16:14:14	✔ Accepted assignment 0002183356--630cbb8a1dc9cc6280197990 with answer
+"names"
+2022-08-29 16:14:15	⚠ Rejected assignment 0002183356--630cbb4dd317946b2c197785 with answer
+"Structure"
+2022-08-29 16:14:16	✔ Accepted assignment 0002183356--630cbb63dd4a291311d79a9c with answer
+"is the class of"
+2022-08-29 16:14:17	ℹ Pool describe_relations is now 94% complete ...
+2022-08-29 16:14:39	ℹ Pool describe_relations is now 95% complete ...
+2022-08-29 16:14:55	✔ Accepted assignment 0002183356--630cba727163075590057ba8 with answer
+"describes"
+2022-08-29 16:14:56	⚠ Rejected assignment 0002183356--630cbb03b058a31c8d180e14 with answer
+"The closer look of the different internal view of horny hoof ."
+2022-08-29 16:14:57	⚠ Rejected assignment 0002183356--630cba9a7163075590057eac with answer
+"A names B"
+2022-08-29 16:14:58	✔ Accepted assignment 0002183356--630cbb90d317946b2c197ba3 with answer
+"Is a class of"
+2022-08-29 16:15:00	⚠ Rejected assignment 0002183356--630cbb98857d4243e7c832a3 with answer
+"Season"
+2022-08-29 16:15:01	✔ Accepted assignment 0002183356--630cbb3d7cfaf02096008f04 with answer
+"Receives pressures from"
+2022-08-29 16:15:02	⚠ Rejected assignment 0002183356--630cbb97d317946b2c197bef with answer
+"6"
+2022-08-29 16:15:04	✔ Accepted assignment 0002183356--630cbaa4a05be7308d4a0676 with answer
+"is the type of"
+2022-08-29 16:15:06	⚠ Rejected assignment 0002183356--630cbbaea22771012dbb8e3a with answer
+"Battery"
+2022-08-29 16:15:08	✔ Accepted assignment 0002183356--630cbaff8a58084471998f5f with answer
+"Describes"
+2022-08-29 16:15:09	✔ Accepted assignment 0002183356--630cbb6da22771012dbb8866 with answer
+"is the class of"
+2022-08-29 16:15:10	✔ Accepted assignment 0002183356--630cbba3a05be7308d4a15c2 with answer
+"Describes"
+2022-08-29 16:15:11	⚠ Rejected assignment 0002183356--630cbb93b5470b3f336b1042 with answer
+"connection"
+2022-08-29 16:15:13	✔ Accepted assignment 0002183356--630cbbaa0b55c35e8cb1e04e with answer
+"correct"
+2022-08-29 16:15:14	⚠ Rejected assignment 0002183356--630cbbb716b73f29c215c629 with answer
+"3"
+2022-08-29 16:15:15	⚠ Rejected assignment 0002183356--630cbb94af3ebb2727bccea9 with answer
+"First"
+2022-08-29 16:15:15	ℹ Pool describe_relations is now 95% complete ...
+2022-08-29 16:15:32	✔ Accepted assignment 0002183356--630cba920b55c35e8cb1d750 with answer
+" Fruit Promoting eye health "
+2022-08-29 16:15:33	✔ Accepted assignment 0002183356--630cba84fd123c3cf9f12157 with answer
+"contains "
+2022-08-29 16:15:33	✔ Accepted assignment 0002183356--630cbb957268a7548cae58f4 with answer
+"describes the position of "
+2022-08-29 16:15:34	✔ Accepted assignment 0002183356--630cbbb8a1a4ab631726e14f with answer
+"names"
+2022-08-29 16:15:36	✔ Accepted assignment 0002183356--630cbb6bd317946b2c1978fc with answer
+"A is the outcome of Pressure  from B"
+2022-08-29 16:15:36	✔ Accepted assignment 0002183356--630cbbdbaf3ebb2727bcd5a8 with answer
+"names"
+2022-08-29 16:15:37	ℹ Pool describe_relations is now 95% complete ...
+2022-08-29 16:15:53	ℹ Pool describe_relations is now 96% complete ...
+2022-08-29 16:16:10	✔ Accepted assignment 0002183356--630cbbee8a58084471999705 with answer
+"names"
+2022-08-29 16:16:11	✔ Accepted assignment 0002183356--630cbbf5857d4243e7c838cc with answer
+"names"
+2022-08-29 16:16:12	✔ Accepted assignment 0002183356--630cbaab4831ca0f348a8e13 with answer
+"is life cycles names of"
+2022-08-29 16:16:13	✔ Accepted assignment 0002183356--630cbaa39d444055d691a5bc with answer
+"includes"
+2022-08-29 16:16:15	⚠ Rejected assignment 0002183356--630cbbf23b6795124fc7b42e with answer
+"3"
+2022-08-29 16:16:16	⚠ Rejected assignment 0002183356--630cbbbc8a580844719994d9 with answer
+"Timming"
+2022-08-29 16:16:16	ℹ Pool describe_relations is now 96% complete ...
+2022-08-29 16:16:43	⚠ Rejected assignment 0002183356--630cbbf57a82c77175224247 with answer
+"Vaginga"
+2022-08-29 16:16:44	⚠ Rejected assignment 0002183356--630cbaf4921d0c42d3dc4b5c with answer
+"an essential source of energy for"
+2022-08-29 16:16:45	✔ Accepted assignment 0002183356--630cbab5f08fdf14c5fcec39 with answer
+"enumerate"
+2022-08-29 16:16:46	✔ Accepted assignment 0002183356--630cbbaaa22771012dbb8df5 with answer
+"the shadow of the sun is reflected on the ground"
+2022-08-29 16:16:47	✔ Accepted assignment 0002183356--630cba69a22771012dbb6b51 with answer
+"B shows A"
+2022-08-29 16:16:50	ℹ Pool describe_relations is now 96% complete ...
+2022-08-29 16:17:08	ℹ Pool describe_relations is now 96% complete ...
+2022-08-29 16:17:25	✔ Accepted assignment 0002183356--630cbb7aa05be7308d4a12ef with answer
+"describes"
+2022-08-29 16:17:26	✔ Accepted assignment 0002183356--630cbbf616b73f29c215c97c with answer
+"describes the state of type of"
+2022-08-29 16:17:28	⚠ Rejected assignment 0002183356--630cbc4271630755900597f2 with answer
+"names "
+2022-08-29 16:17:29	✔ Accepted assignment 0002183356--630cbc227268a7548cae64df with answer
+"describes the position of"
+2022-08-29 16:17:30	⚠ Rejected assignment 0002183356--630cbc22735ccd0e800fb41f with answer
+"Lunar eclipse of moon"
+2022-08-29 16:17:30	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:17:46	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:18:03	✔ Accepted assignment 0002183356--630cbc596c7e504027a4c152 with answer
+"names"
+2022-08-29 16:18:04	✔ Accepted assignment 0002183356--630cba7c0b55c35e8cb1d61e with answer
+"names"
+2022-08-29 16:18:06	✔ Accepted assignment 0002183356--630cbae5fd123c3cf9f12672 with answer
+"names"
+2022-08-29 16:18:07	⚠ Rejected assignment 0002183356--630cbc6b19eedd4475b46bff with answer
+"incorrect"
+2022-08-29 16:18:07	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:18:24	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:18:41	✔ Accepted assignment 0002183356--630cbc7665b2cc1fa7fb6afb with answer
+"is the stage of"
+2022-08-29 16:18:42	✔ Accepted assignment 0002183356--630cbaa2ef591d16ede71656 with answer
+"names"
+2022-08-29 16:18:44	⚠ Rejected assignment 0002183356--630cbbf16c7e504027a4bb19 with answer
+"A name b"
+2022-08-29 16:18:45	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:19:02	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:19:19	✔ Accepted assignment 0002183356--630cba8b9d444055d691a4a4 with answer
+"names"
+2022-08-29 16:19:19	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:19:38	ℹ Pool describe_relations is now 97% complete ...
+2022-08-29 16:19:55	⚠ Rejected assignment 0002183356--630cba9ff08fdf14c5fceb2f with answer
+"A names B"
+2022-08-29 16:19:55	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:20:12	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:20:29	⚠ Rejected assignment 0002183356--630cbce57cfaf0209600aaaa with answer
+"incorrect"
+2022-08-29 16:20:30	✔ Accepted assignment 0002183356--630cbab0fd123c3cf9f123f8 with answer
+"is breeding stage of"
+2022-08-29 16:20:31	⚠ Rejected assignment 0002183356--630cbcfbff8f302e2d97e3f5 with answer
+"incorrect"
+2022-08-29 16:20:34	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:20:59	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:21:16	⚠ Rejected assignment 0002183356--630cbb2ae3a4854c648d900c with answer
+"mouth, pha the organs that take food and liquids and break them down into
+substances that the body can use for energy"
+2022-08-29 16:21:17	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:21:34	✔ Accepted assignment 0002183356--630cbb05f08fdf14c5fcf10d with answer
+"is family of"
+2022-08-29 16:21:35	⚠ Rejected assignment 0002183356--630cbd267268a7548cae7faf with answer
+"Resistance "
+2022-08-29 16:21:35	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:21:53	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:22:10	✔ Accepted assignment 0002183356--630cbd3e3cd1d43971fde201 with answer
+"describes"
+2022-08-29 16:22:11	⚠ Rejected assignment 0002183356--630cbd43a1d5dd12f434e485 with answer
+"А"
+2022-08-29 16:22:13	⚠ Rejected assignment 0002183356--630cbce4aa706429a0eea245 with answer
+"ON A STRANGE OBJECT"
+2022-08-29 16:22:14	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:22:33	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:22:49	✔ Accepted assignment 0002183356--630cbd68d317946b2c1997d1 with answer
+"names"
+2022-08-29 16:22:50	✔ Accepted assignment 0002183356--630cbb28a06b2575d886fe93 with answer
+"metamorphose"
+2022-08-29 16:22:51	✔ Accepted assignment 0002183356--630cbc93b5470b3f336b1d19 with answer
+"Photosynthesis is the process whereby green plant manufacture their food with
+the help of sunlight in the presence of chlorophyll"
+2022-08-29 16:22:52	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:23:09	ℹ Pool describe_relations is now 98% complete ...
+2022-08-29 16:23:26	✔ Accepted assignment 0002183356--630cbd89a22771012dbbbf00 with answer
+"describes"
+2022-08-29 16:23:27	✔ Accepted assignment 0002183356--630cbd9da22771012dbbc0fd with answer
+"gives information about"
+2022-08-29 16:23:29	✔ Accepted assignment 0002183356--630cbda4a05be7308d4a3460 with answer
+"describes"
+2022-08-29 16:23:30	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:23:49	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:24:07	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:24:24	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:24:41	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:24:59	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:25:18	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:25:34	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:25:54	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:26:12	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:26:29	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:26:45	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:27:03	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:27:20	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:27:37	⚠ Rejected assignment 0002183356--630cbea03cd1d43971fdf698 with answer
+"A"
+2022-08-29 16:27:39	✔ Accepted assignment 0002183356--630cbe99af3ebb2727bd1b05 with answer
+"describes"
+2022-08-29 16:27:40	⚠ Rejected assignment 0002183356--630cbe9a65b2cc1fa7fb91fe with answer
+"earth"
+2022-08-29 16:27:40	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:28:00	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:28:17	✔ Accepted assignment 0002183356--630cbea77268a7548caea80f with answer
+"describes"
+2022-08-29 16:28:18	✔ Accepted assignment 0002183356--630cbec94fd1d555930c96e3 with answer
+"names"
+2022-08-29 16:28:19	⚠ Rejected assignment 0002183356--630cbed4b8d27e33eb6e0b2b with answer
+"Gi"
+2022-08-29 16:28:20	✔ Accepted assignment 0002183356--630cbecce09bfb3537b647ba with answer
+"describes"
+2022-08-29 16:28:20	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:28:43	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:29:00	⚠ Rejected assignment 0002183356--630cbea7a1d5dd12f434fde4 with answer
+"5"
+2022-08-29 16:29:01	✔ Accepted assignment 0002183356--630cbef5e2b7aa2ff74f3c99 with answer
+"describes"
+2022-08-29 16:29:03	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:29:21	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:29:38	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:29:57	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:30:13	✔ Accepted assignment 0002183356--630cbf49a05be7308d4a597d with answer
+"describes"
+2022-08-29 16:30:16	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:30:34	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:30:51	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:31:08	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:31:25	⚠ Rejected assignment 0002183356--630cbf5eef591d16ede767be with answer
+"ПРАВИЛЬНО"
+2022-08-29 16:31:28	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:31:48	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:32:05	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:32:26	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:32:43	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:33:00	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:33:17	⚠ Rejected assignment 0002183356--630cbfc422c8e90d72c8cf00 with answer
+"Moon"
+2022-08-29 16:33:18	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:33:36	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:33:56	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:34:13	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:34:30	⚠ Rejected assignment 0002183356--630cc04bfd123c3cf9f17deb with answer
+"5"
+2022-08-29 16:34:30	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:34:47	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:35:13	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:35:36	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:35:55	ℹ Pool describe_relations is now 99% complete ...
+2022-08-29 16:36:12	✔ Accepted assignment 0002183356--630cc084aa706429a0eef41f with answer
+"B shows A"
+2022-08-29 16:36:16	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:36:36	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:36:54	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:37:19	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:37:37	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:37:56	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:38:13	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:38:35	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:38:54	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:39:13	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:39:31	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:39:52	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:40:10	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:40:28	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:40:46	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:41:01	ℹ Closed pool with ID 35140438
+2022-08-29 16:41:03	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:41:19	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:41:39	ℹ Pool describe_relations is now 100% complete ...
+2022-08-29 16:42:56	✔ Successfully completed the task sequence

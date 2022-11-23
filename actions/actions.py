@@ -147,7 +147,7 @@ class Aggregate:
     """
     This class can be used to aggregate crowdsourced answers.
     """
-    def __init__(self, configuration, task, forward):
+    def __init__(self, configuration, task, forward=None, save=False):
 
         self.task = task
         self.conf = read_configuration(configuration)
@@ -167,12 +167,10 @@ class Aggregate:
         self.prev_assignments = set()
 
         self.complete = False
+        self.save = save
         
 
     def __call__(self, pool: toloka.Pool) -> None:
-
-        # Doesn't work:
-        # df = self.task.client.get_assignments_df(pool_id=self.task.pool.id)
 
         assignments = list(self.task.client.get_assignments(pool_id=pool.id))
 
@@ -223,6 +221,10 @@ class Aggregate:
                 self.result = GLAD().fit_predict(df)
 
             assert self.result is not None, raise_error("Aggregation did not produce a result!")
+
+            if self.save:
+                print(f"Saving aggregated results to file {self.name}_results.tsv.")
+                self.result.to_csv(f"{self.name}_results.tsv", sep="\t")
 
             forward_data = [{"id": df.loc[df["task"] == task, "id"].iloc[0], 
                              "input_data": df.loc[df["task"] == task, "inputs"].iloc[0], 

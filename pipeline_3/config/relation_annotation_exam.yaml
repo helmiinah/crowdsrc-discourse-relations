@@ -1,0 +1,63 @@
+name: relation_annotation_exam
+data:
+  file: data/bbox_pairs_10_exam.tsv
+  input:
+    image: url
+  output:
+    result: str
+interface:
+  options:
+    elaboration: A describes B
+    preparation: A explains B
+    identification: A is the name of B
+    classascription: A is the class of B
+    propertyascription: A describes a property of B
+  prompt: Choose the option that best describes the relationship between the diagram elements A and B.
+training:
+  setup:
+    private_name: Training for relation annotation exam
+    shuffle_tasks_in_task_suite: false
+    assignment_max_duration_seconds: 600
+    training_tasks_in_task_suite_count: 5
+    retry_training_after_days: 1
+    inherited_instructions: true
+  data:
+    file: data/bbox_pairs_10_training.tsv
+    input:
+      image: url
+    output:
+      result: str
+project:
+  setup:
+    public_name: "[EXAM] Examine the relationship between two diagram elements"
+    public_description: "Look at the diagrams and choose the option that best describes the relationship between the outlined elements."
+  instructions: instructions/exam_instructions.html
+pool:
+  estimated_time_per_suite: 60
+  exam:
+    history_size: 10
+    min_answers: 10
+    max_performers: 10
+  setup:
+    private_name: Exam for relation annotation
+    reward_per_assignment: 0.20
+    assignment_max_duration_seconds: 600
+    auto_accept_solutions: true
+  defaults:
+    default_overlap_for_new_tasks: 1
+    default_overlap_for_new_task_suites: 1
+  mixer:
+    real_tasks_count: 0
+    golden_tasks_count: 5
+    training_tasks_count: 0
+  training:
+    training_passing_skill_value: 70
+  skill:
+    #id: 12192  # sandbox
+    id: 54660
+quality_control:
+  captcha:
+    frequency: MEDIUM
+    success_rate: 80
+    ban_duration: 3
+    ban_units: DAYS

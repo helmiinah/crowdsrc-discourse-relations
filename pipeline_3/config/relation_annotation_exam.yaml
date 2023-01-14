@@ -7,9 +7,9 @@ data:
     result: str
 interface:
   options:
-    elaboration: A describes B
-    preparation: A explains B
-    identification: A is the name of B
+    elaboration: A provides additional information about B
+    preparation: A helps to understand B
+    identification: A names B
     classascription: A is the class of B
     propertyascription: A describes a property of B
   prompt: Choose the option that best describes the relationship between the diagram elements A and B.
@@ -33,11 +33,12 @@ project:
     public_description: "Look at the diagrams and choose the option that best describes the relationship between the outlined elements."
   instructions: instructions/exam_instructions.html
 pool:
+  blocklist: data/blocklist.tsv
   estimated_time_per_suite: 60
   exam:
     history_size: 10
     min_answers: 10
-    max_performers: 10
+    max_performers: 15
   setup:
     private_name: Exam for relation annotation
     reward_per_assignment: 0.20

@@ -1,0 +1,660 @@
+[
+    {
+        "15.png": {
+            "relation": "identification",
+            "nucleus": "B2",
+            "satellite": "T13"
+        }
+    },
+    {
+        "2762.png": {
+            "relation": "identification",
+            "nucleus": "B2",
+            "satellite": "T1"
+        }
+    },
+    {
+        "298.png": {
+            "relation": "identification",
+            "nucleus": "B9",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4397.png": {
+            "relation": "identification",
+            "nucleus": "B23",
+            "satellite": "T2"
+        }
+    },
+    {
+        "2301.png": {
+            "relation": "identification",
+            "nucleus": "B5",
+            "satellite": "T4"
+        }
+    },
+    {
+        "2656.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T5"
+        }
+    },
+    {
+        "199.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T6"
+        }
+    },
+    {
+        "4805.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T4"
+        }
+    },
+    {
+        "210.png": {
+            "relation": "identification",
+            "nucleus": "B1",
+            "satellite": "T2"
+        }
+    },
+    {
+        "4607.png": {
+            "relation": "identification",
+            "nucleus": "B5",
+            "satellite": "T4"
+        }
+    },
+    {
+        "2734.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "2512.png": {
+            "relation": "identification",
+            "nucleus": "B4",
+            "satellite": "T6"
+        }
+    },
+    {
+        "2534.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "1290.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2245.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2105.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "1002.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T3"
+        }
+    },
+    {
+        "2255.png": {
+            "relation": "identification",
+            "nucleus": "B1",
+            "satellite": "T0"
+        }
+    },
+    {
+        "234.png": {
+            "relation": "identification",
+            "nucleus": "B1",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4426.png": {
+            "relation": "identification",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "182.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4004.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "654.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "2867.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "3208.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T12"
+        }
+    },
+    {
+        "3651.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "3176.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2885.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T2"
+        }
+    },
+    {
+        "2862.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "2953.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T9"
+        }
+    },
+    {
+        "3850.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T2"
+        }
+    },
+    {
+        "1097.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "3154.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T5"
+        }
+    },
+    {
+        "3544.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T8"
+        }
+    },
+    {
+        "3451.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T3"
+        }
+    },
+    {
+        "2966.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T7"
+        }
+    },
+    {
+        "4873.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T8"
+        }
+    },
+    {
+        "4071.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4850.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "656.png": {
+            "relation": "preparation",
+            "nucleus": "B0",
+            "satellite": "T4"
+        }
+    },
+    {
+        "2203.png": {
+            "relation": "elaboration",
+            "nucleus": "B3",
+            "satellite": "T4"
+        }
+    },
+    {
+        "3419.png": {
+            "relation": "elaboration",
+            "nucleus": "B1",
+            "satellite": "T5"
+        }
+    },
+    {
+        "8.png": {
+            "relation": "elaboration",
+            "nucleus": "B0",
+            "satellite": "T6"
+        }
+    },
+    {
+        "2159.png": {
+            "relation": "elaboration",
+            "nucleus": "B1",
+            "satellite": "T2"
+        }
+    },
+    {
+        "2640.png": {
+            "relation": "elaboration",
+            "nucleus": "B11",
+            "satellite": "T3"
+        }
+    },
+    {
+        "4694.png": {
+            "relation": "elaboration",
+            "nucleus": "B2",
+            "satellite": "T20"
+        }
+    },
+    {
+        "4366.png": {
+            "relation": "elaboration",
+            "nucleus": "B1",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2661.png": {
+            "relation": "elaboration",
+            "nucleus": "B0",
+            "satellite": "T5"
+        }
+    },
+    {
+        "2501.png": {
+            "relation": "elaboration",
+            "nucleus": "B2",
+            "satellite": "T5"
+        }
+    },
+    {
+        "2932.png": {
+            "relation": "elaboration",
+            "nucleus": "B2",
+            "satellite": "T9"
+        }
+    },
+    {
+        "1932.png": {
+            "relation": "elaboration",
+            "nucleus": "B3",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2602.png": {
+            "relation": "elaboration",
+            "nucleus": "B3",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4539.png": {
+            "relation": "elaboration",
+            "nucleus": "B0",
+            "satellite": "T8"
+        }
+    },
+    {
+        "2339.png": {
+            "relation": "elaboration",
+            "nucleus": "B15",
+            "satellite": "T7"
+        }
+    },
+    {
+        "37.png": {
+            "relation": "elaboration",
+            "nucleus": "B3",
+            "satellite": "T5"
+        }
+    },
+    {
+        "655.png": {
+            "relation": "elaboration",
+            "nucleus": "B4",
+            "satellite": "T1"
+        }
+    },
+    {
+        "2692.png": {
+            "relation": "elaboration",
+            "nucleus": "B2",
+            "satellite": "T4"
+        }
+    },
+    {
+        "2579.png": {
+            "relation": "elaboration",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1712.png": {
+            "relation": "elaboration",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "3514.png": {
+            "relation": "elaboration",
+            "nucleus": "B1",
+            "satellite": "T15"
+        }
+    },
+    {
+        "4499.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4383.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4822.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1093.png": {
+            "relation": "property-ascription",
+            "nucleus": "B4",
+            "satellite": "T3"
+        }
+    },
+    {
+        "219.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "4496.png": {
+            "relation": "property-ascription",
+            "nucleus": "B2",
+            "satellite": "T2"
+        }
+    },
+    {
+        "4727.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "4419.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "967.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1000.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "935.png": {
+            "relation": "property-ascription",
+            "nucleus": "B11",
+            "satellite": "T7"
+        }
+    },
+    {
+        "4759.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "4769.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "953.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4443.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "1020.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4502.png": {
+            "relation": "property-ascription",
+            "nucleus": "B3",
+            "satellite": "T3"
+        }
+    },
+    {
+        "1362.png": {
+            "relation": "property-ascription",
+            "nucleus": "B8",
+            "satellite": "T7"
+        }
+    },
+    {
+        "4714.png": {
+            "relation": "property-ascription",
+            "nucleus": "B2",
+            "satellite": "T11"
+        }
+    },
+    {
+        "1609.png": {
+            "relation": "property-ascription",
+            "nucleus": "B0",
+            "satellite": "T4"
+        }
+    },
+    {
+        "944.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T4"
+        }
+    },
+    {
+        "2055.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4684.png": {
+            "relation": "class-ascription",
+            "nucleus": "B1",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1934.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T2"
+        }
+    },
+    {
+        "4228.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T2"
+        }
+    },
+    {
+        "4490.png": {
+            "relation": "class-ascription",
+            "nucleus": "B4",
+            "satellite": "T6"
+        }
+    },
+    {
+        "1837.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T1"
+        }
+    },
+    {
+        "991.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1717.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "724.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "4354.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1456.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T7"
+        }
+    },
+    {
+        "1025.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    },
+    {
+        "1718.png": {
+            "relation": "class-ascription",
+            "nucleus": "B0",
+            "satellite": "T0"
+        }
+    }
+]

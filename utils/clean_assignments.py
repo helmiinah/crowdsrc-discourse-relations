@@ -20,8 +20,11 @@ def url_to_id(x):
 
 
 def find_gold_standard(row):
-    d = [value for dic in structures for (key, value) in dic.items() if key == row["id"]]
+    d = [
+        value for dic in structures for (key, value) in dic.items() if key == row["id"]
+    ]
     return d[0]["relation"]
+
 
 df = pd.read_csv("assignments/description_assignments_28-09-2022.tsv", sep="\t")
 
@@ -34,4 +37,6 @@ df["gold"] = df.apply(lambda row: find_gold_standard(row), axis=1)
 
 df = df.sort_values(by=["id"])
 
-df[["id", "answer", "gold"]].to_csv("cleaned_assignments_28-09-22.tsv", sep="\t", index=None)
+df[["id", "answer", "gold"]].to_csv(
+    "cleaned_assignments_28-09-22.tsv", sep="\t", index=None
+)

@@ -1,0 +1,11 @@
+image	result	hint
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/3975_pair.png	identification	Incorrect. The correct relation is "A names B", because A is the name of B.
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/4369_pair.png	identification	Incorrect. The correct relation is "A names B", because "Apricots" is the name of the fruit in element B.
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/2591_pair.png	propertyascription	Incorrect. The correct answer is "A describes a property of B", because the text in A gives information about one property of B (the shadow on the Earth).
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/4515_pair.png	elaboration	Incorrect. The correct answer is "A provides additional information about B".
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/1242_pair.png	identification	Incorrect. The correct relation is "A names B", because A is the name of B.
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/4528_pair.png	propertyascription	Incorrect. The correct answer is "A describes a property of B", because the text in A gives information about one property of B (the shape of the leaf).
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/53_pair.png	identification	Incorrect. The correct relation is "A names B", because "adult butterfly" is the name of the animal in that stage of life.
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/1435_pair.png	identification	Incorrect. The correct relation is "A names B", because "Mercury" is the name of the planet in element B.
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/2695_pair.png	elaboration	Incorrect. The correct answer is "A provides additional information about B".
+https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/4086_pair.png	preparation	Incorrect. The correct answer is "A helps to understand B", because the text in A helps the viewer understand what B is portraying.

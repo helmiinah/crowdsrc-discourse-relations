@@ -1,0 +1,3 @@
+name: aggregate_relations
+source: describe_relations
+method: dawid_skene

@@ -4,7 +4,7 @@ import os
 
 df = pd.DataFrame(columns=["image"])
 
-for f in os.listdir("pipeline_4/data/bbox_pairs_final_94"):
+for f in os.listdir("/home/helmiina/ma_thesis/bbox_pairs_random_100"):
     url = f"https://s3.datacloud.helsinki.fi/crowdsrc:disc-rel/{f}"
     print(url)
     row = pd.DataFrame({"image": [url]})
@@ -12,4 +12,4 @@ for f in os.listdir("pipeline_4/data/bbox_pairs_final_94"):
 
 print(df)
 
-df.to_csv("pipeline_4/data/bbox_pairs_final_94.tsv", sep="\t", index=None)
+df.to_csv("pipeline_4/data/bbox_pairs_random_100.tsv", sep="\t", index=None)

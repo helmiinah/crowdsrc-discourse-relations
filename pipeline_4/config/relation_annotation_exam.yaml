@@ -33,14 +33,14 @@ project:
     public_description: "Look at the diagrams and choose the option that best describes the relationship between the outlined elements."
   instructions: instructions/exam_instructions.html
 pool:
-  estimated_time_per_suite: 60
+  estimated_time_per_suite: 45
   exam:
     history_size: 10
     min_answers: 10
-    max_performers: 15
+    max_performers: 20
   setup:
     private_name: Exam for relation annotation
-    reward_per_assignment: 0.20
+    reward_per_assignment: 0.15
     assignment_max_duration_seconds: 600
     auto_accept_solutions: true
   defaults:

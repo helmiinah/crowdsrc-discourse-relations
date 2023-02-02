@@ -4,7 +4,7 @@ import json
 from sklearn.metrics import accuracy_score
 
 
-with open("utils/structures_final_94.json", "r") as f:
+with open("utils/structures_random_100.json", "r") as f:
     structures = json.load(f)
 
 
@@ -21,7 +21,7 @@ def find_gold_standard(row):
     return d[0]["relation"].replace("-", "")
 
 
-df = pd.read_csv("pipeline_4/aggregate_relations_results_13-01-23.tsv", sep="\t")
+df = pd.read_csv("pipeline_4/aggregate_relations_results_20-01-23.tsv", sep="\t")
 df = df.rename(columns={"task": "id"})
 
 df_without_other = df[df["agg_label"] != "other"]
@@ -37,7 +37,7 @@ acc = accuracy_score(df_without_other["agg_label"], df_without_other["gold"])
 print("Accuracy:", acc)
 
 df_without_other.to_csv(
-    "pipeline_4/results/results_without_other_13-01-23.tsv", sep="\t", index=None
+    "pipeline_4/results/results_without_other_20-01-23.tsv", sep="\t", index=None
 )
 
 # df["id"] = df["id"].apply(lambda x: url_to_id(x))

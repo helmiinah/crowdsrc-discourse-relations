@@ -1,6 +1,6 @@
 name: describe_relations
 data:
-  file: data/bbox_pairs_final_94.tsv
+  file: data/bbox_pairs_random_100.tsv
   input:
     image: url
   output:
@@ -23,10 +23,10 @@ project:
     public_description: Look at the diagrams and choose the option that best describes the relationship between the outlined elements.
   instructions: instructions/instructions.html
 pool:
-  estimated_time_per_suite: 60
+  estimated_time_per_suite: 90
   setup:
     private_name: Annotate diagram relations
-    reward_per_assignment: 0.2
+    reward_per_assignment: 0.3
     assignment_max_duration_seconds: 600
     auto_accept_solutions: true
   defaults:
@@ -41,7 +41,7 @@ pool:
       - EN
     skill:
       #- 12192: 50  # sandbox
-      - 54660: 80
+      - 54660: 70
 quality_control:
   fast_responses:
     history_size: 5

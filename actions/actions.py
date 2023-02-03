@@ -223,8 +223,8 @@ class Aggregate:
             assert self.result is not None, raise_error("Aggregation did not produce a result!")
 
             if self.save:
-                print(f"Saving aggregated results to file {self.name}_results.tsv.")
-                self.result.to_csv(f"{self.name}_results.tsv", sep="\t")
+                self.result.to_csv(f"{self.name}_results_20-01-23.tsv", sep="\t")
+                msg.good(f"Saved aggregated results to file {self.name}_results_20-01-23.tsv.")
 
             forward_data = [{"id": df.loc[df["task"] == task, "id"].iloc[0], 
                              "input_data": df.loc[df["task"] == task, "inputs"].iloc[0], 

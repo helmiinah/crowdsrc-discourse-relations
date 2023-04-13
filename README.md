@@ -1,6 +1,6 @@
 ## `crowdsrc-discourse-relations`
 
-### Repository for the tools and data for my MA thesis `Annotating multimodal discourse relations by combining crowdsourcing and natural language processing`.
+### Repository for the tools and data for my MA thesis *Annotating multimodal discourse relations by combining crowdsourcing and natural language processing*.
 
 Majority of the functionality is adapted from an old version of https://github.com/thiippal/abulafia with some additions. Some functionality in this repo depends on the outdated version as well as an older version of `toloka-kit`.
 

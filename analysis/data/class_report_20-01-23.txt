@@ -1,0 +1,11 @@
+                    precision    recall  f1-score   support
+
+   classascription       0.00      0.00      0.00         1
+       elaboration       1.00      0.38      0.56        13
+    identification       0.62      0.86      0.72        44
+       preparation       0.71      0.56      0.63        18
+propertyascription       0.58      0.35      0.44        20
+
+          accuracy                           0.62        96
+         macro avg       0.58      0.43      0.47        96
+      weighted avg       0.68      0.62      0.62        96

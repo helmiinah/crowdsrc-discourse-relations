@@ -23,18 +23,22 @@ tracep = TracebackPrinter()
 
 # Initiate Pyenchant spellchecker and SpaCy language model
 d = enchant.Dict("en_US")
-model = spacy.load('en_core_web_sm')
+model = spacy.load("en_core_web_sm")
 
 
 def validate_answer(result: str) -> bool:
 
     result = result.lower()
     phrase = "John " + result + " John"
-    
+
     parsed = model(phrase)
 
-    if set([d.check(w) for w in result.split()]) == {True} and len(str(result)) > 1 and set(list(result)) != {"a", "b"}:
-        if [t.pos_ for t in parsed if t.pos_ in ['AUX', 'VERB']]:
+    if (
+        set([d.check(w) for w in result.split()]) == {True}
+        and len(str(result)) > 1
+        and set(list(result)) != {"a", "b"}
+    ):
+        if [t.pos_ for t in parsed if t.pos_ in ["AUX", "VERB"]]:
             return True
         else:
             return False
@@ -42,8 +46,7 @@ def validate_answer(result: str) -> bool:
         return False
 
 
-def create_tasks(input_obj,
-                 input_data: pd.DataFrame) -> list:
+def create_tasks(input_obj, input_data: pd.DataFrame) -> list:
     """
     This function creates Toloka Task objects from input data based on the JSON configuration.
 
@@ -57,24 +60,30 @@ def create_tasks(input_obj,
     """
 
     # Print status message
-    msg.info(f'Creating and adding tasks to pool with ID {input_obj.pool.id}')
+    msg.info(f"Creating and adding tasks to pool with ID {input_obj.pool.id}")
 
     # Fetch input variable names from the configuration. Create a dictionary with matching
     # key and value pairs, which is updated when creating the toloka.Task objects below.
-    input_values = {n: n for n in list(input_obj.conf['data']['input'].keys())}
+    input_values = {n: n for n in list(input_obj.conf["data"]["input"].keys())}
 
-    assert set(input_values.keys()) == set(input_data.columns), raise_error(f"Input data column names "
-                                                                            f"do not match input configuration "
-                                                                            f"for the pool {input_obj.name}!")
+    assert set(input_values.keys()) == set(input_data.columns), raise_error(
+        f"Input data column names "
+        f"do not match input configuration "
+        f"for the pool {input_obj.name}!"
+    )
 
     # Create a list of Toloka Task objects by looping over the input DataFrame. Use the
     # dictionary of input variable names 'input_values' to retrieve the correct columns
     # from the DataFrame.
 
-    tasks = [toloka.Task(pool_id=input_obj.pool.id,
-                         input_values={k: row[v] for k, v in input_values.items()},
-                         unavailable_for=input_obj.blocklist)
-             for _, row in input_data.iterrows()]
+    tasks = [
+        toloka.Task(
+            pool_id=input_obj.pool.id,
+            input_values={k: row[v] for k, v in input_values.items()},
+            unavailable_for=input_obj.blocklist,
+        )
+        for _, row in input_data.iterrows()
+    ]
 
     return tasks
 
@@ -92,31 +101,38 @@ def create_exam_tasks(input_obj) -> list:
     """
 
     # Print status message
-    msg.info(f'Creating and adding exam tasks to pool with ID {input_obj.pool.id}')
+    msg.info(f"Creating and adding exam tasks to pool with ID {input_obj.pool.id}")
 
     # Load exam tasks from the path defined in the JSON configuration
-    exam_data = load_data(input_obj.conf['data']['file'], input_obj.conf['data']['input'])
+    exam_data = load_data(
+        input_obj.conf["data"]["file"], input_obj.conf["data"]["input"]
+    )
 
     # Fetch input variable names from the configuration. Create a dictionary with matching
     # key and value pairs, which is updated when creating the toloka.Task objects below.
-    input_values = {n: n for n in list(input_obj.conf['data']['input'].keys())}
-    output_values = {n: n for n in list(input_obj.conf['data']['output'].keys())}
+    input_values = {n: n for n in list(input_obj.conf["data"]["input"].keys())}
+    output_values = {n: n for n in list(input_obj.conf["data"]["output"].keys())}
 
     # Populate the pool with exam tasks that have known answers
-    tasks = [toloka.Task(pool_id=input_obj.pool.id,
-                         input_values={k: row[v] for k, v in input_values.items()},
-                         known_solutions=[toloka.task.BaseTask.KnownSolution(
-                             output_values={k: str(row[v]) for k, v in
-                                            output_values.items()})],
-                         infinite_overlap=True,
-                         unavailable_for=input_obj.blocklist)
-             for _, row in exam_data.iterrows()]
+    tasks = [
+        toloka.Task(
+            pool_id=input_obj.pool.id,
+            input_values={k: row[v] for k, v in input_values.items()},
+            known_solutions=[
+                toloka.task.BaseTask.KnownSolution(
+                    output_values={k: str(row[v]) for k, v in output_values.items()}
+                )
+            ],
+            infinite_overlap=True,
+            unavailable_for=input_obj.blocklist,
+        )
+        for _, row in exam_data.iterrows()
+    ]
 
     return tasks
 
 
-def add_tasks(input_obj,
-              tasks: List[Task]) -> None:
+def add_tasks(input_obj, tasks: List[Task]) -> None:
     """
     This function adds Toloka Task objects to a pool on Toloka. The function first verifies that
     these have not been added to the pool already.
@@ -136,14 +152,15 @@ def add_tasks(input_obj,
     if len(old_tasks) > 0:
 
         # Compare the existing tasks to those created above under self.tasks
-        tasks_exist = compare_tasks(old_tasks=old_tasks,
-                                    new_tasks=tasks)
+        tasks_exist = compare_tasks(old_tasks=old_tasks, new_tasks=tasks)
 
         if tasks_exist:
 
             # Print status message
-            msg.warn(f'The tasks to be added already exist in the pool. Not adding '
-                     f'duplicates.')
+            msg.warn(
+                f"The tasks to be added already exist in the pool. Not adding "
+                f"duplicates."
+            )
 
     else:
 
@@ -154,16 +171,17 @@ def add_tasks(input_obj,
     if not tasks_exist:
 
         # Add tasks to the main pool
-        add_tasks_to_pool(client=input_obj.client,
-                          tasks=tasks,
-                          pool=input_obj.pool,
-                          kind='main')
+        add_tasks_to_pool(
+            client=input_obj.client, tasks=tasks, pool=input_obj.pool, kind="main"
+        )
 
 
-def add_tasks_to_pool(client: toloka.TolokaClient,
-                      tasks: list,
-                      pool: Union[toloka.Pool, toloka.Training],
-                      kind: str):
+def add_tasks_to_pool(
+    client: toloka.TolokaClient,
+    tasks: list,
+    pool: Union[toloka.Pool, toloka.Training],
+    kind: str,
+):
     """
     This function loads Toloka Task objects to a pool on Toloka.
 
@@ -179,58 +197,63 @@ def add_tasks_to_pool(client: toloka.TolokaClient,
     # Attempt to create the tasks on Toloka
     try:
 
-        if kind == 'main':
+        if kind == "main":
 
             # Create tasks on Toloka; use the default settings
             client.create_tasks(tasks, allow_defaults=True)
 
-        if kind == 'train':
+        if kind == "train":
 
             # Create tasks on Toloka without default settings
             client.create_tasks(tasks, allow_defaults=False)
 
         # Print status message
-        msg.good(f'Successfully added {len(tasks)} tasks to pool with ID {pool.id}')
+        msg.good(f"Successfully added {len(tasks)} tasks to pool with ID {pool.id}")
 
     # Catch validation error
     except toloka.exceptions.ValidationApiError:
 
         # Print status message
-        raise_error(f'Failed to create tasks on Toloka due to validation error. Check '
-                    f'the configuration file!')
+        raise_error(
+            f"Failed to create tasks on Toloka due to validation error. Check "
+            f"the configuration file!"
+        )
 
 
 def check_io(configuration: dict, expected_input: set, expected_output: set):
 
     # Read input and output data and create data specifications
-    data_in = {k: data_spec[v] for k, v in configuration['data']['input'].items()}
-    data_out = {k: data_spec[v] for k, v in configuration['data']['output'].items()}
+    data_in = {k: data_spec[v] for k, v in configuration["data"]["input"].items()}
+    data_out = {k: data_spec[v] for k, v in configuration["data"]["output"].items()}
 
     # Create a dictionary mapping input data types to variable names.
-    input_data = {v: k for k, v in configuration['data']['input'].items()}
+    input_data = {v: k for k, v in configuration["data"]["input"].items()}
 
     # Raise error if the expected input data types have been provided
     if not set(input_data.keys()) == expected_input:
 
-        raise_error(f'Could not find the expected input types ({", ".join(expected_input)}) for '
-                    f'{configuration["name"]}. Please check the configuration under the '
-                    f'key data/input.')
+        raise_error(
+            f'Could not find the expected input types ({", ".join(expected_input)}) for '
+            f'{configuration["name"]}. Please check the configuration under the '
+            f"key data/input."
+        )
 
     # Create a dictionary mapping output data types to variable names.
-    output_data = {v: k for k, v in configuration['data']['output'].items()}
+    output_data = {v: k for k, v in configuration["data"]["output"].items()}
 
     # Raise error if the expected input data types have been provided
     if not set(output_data.keys()) == expected_output:
 
-        raise_error(f'Could not find the expected input types ({", ".join(expected_output)}) for '
-                    f'{configuration["name"]}. Please check the configuration under the '
-                    f'key data/input.')
+        raise_error(
+            f'Could not find the expected input types ({", ".join(expected_output)}) for '
+            f'{configuration["name"]}. Please check the configuration under the '
+            f"key data/input."
+        )
 
     return data_in, data_out, input_data, output_data
 
 
-def compare_tasks(old_tasks: list,
-                  new_tasks: list) -> bool:
+def compare_tasks(old_tasks: list, new_tasks: list) -> bool:
     """
     This function checks newly-defined Tasks against those that already exist in a given Pool.
 
@@ -268,8 +291,7 @@ def compare_tasks(old_tasks: list,
         return False
 
 
-def get_results(client: toloka.TolokaClient,
-                pool_id: str) -> pd.DataFrame:
+def get_results(client: toloka.TolokaClient, pool_id: str) -> pd.DataFrame:
     """
     This function retrieves task suites from a pool on Toloka, extracts the
     individual tasks and returns them in a pandas DataFrame.
@@ -295,14 +317,16 @@ def get_results(client: toloka.TolokaClient,
         for task, solution in zip(suite.tasks, suite.solutions):
 
             # Extract information from tasks and solutions
-            assignments[len(assignments)] = {**task.input_values,
-                                             **solution.output_values,
-                                             'task_id': task.id,
-                                             'suite_id': suite.id,
-                                             'status': str(suite.status)}
+            assignments[len(assignments)] = {
+                **task.input_values,
+                **solution.output_values,
+                "task_id": task.id,
+                "suite_id": suite.id,
+                "status": str(suite.status),
+            }
 
     # Return results as a pandas DataFrame
-    return pd.DataFrame.from_dict(assignments, orient='index')
+    return pd.DataFrame.from_dict(assignments, orient="index")
 
 
 def load_data(data: str, inputs: dict):
@@ -317,7 +341,7 @@ def load_data(data: str, inputs: dict):
     """
 
     # Print status
-    msg.info(f'Loading data from {data}')
+    msg.info(f"Loading data from {data}")
 
     # Make sure that a TSV-file is used, otherwise raise error
     assert data[-4:] == ".tsv", raise_error("Please use a TSV-file for the tasks!")
@@ -326,20 +350,20 @@ def load_data(data: str, inputs: dict):
     try:
 
         # Read the TSV file – assume that header is provided on the first row
-        df = pd.read_csv(data, sep='\t', header=0)
+        df = pd.read_csv(data, sep="\t", header=0)
 
         # Convert JSON inputs from string to JSON
         json_inputs = [k for k, v in inputs.items() if v == "json"]
         for i in json_inputs:
             df[i] = df[i].apply(lambda x: json.loads(x))
-            
+
         # Print message
-        msg.good(f'Successfully loaded {len(df)} rows of data from {data}')
+        msg.good(f"Successfully loaded {len(df)} rows of data from {data}")
 
     except FileNotFoundError:
 
         # Print message
-        raise_error(f'Could not load the file {data}!')
+        raise_error(f"Could not load the file {data}!")
 
     # Return the DataFrame
     return df
@@ -382,12 +406,13 @@ def read_configuration(configuration: str):
             conf_dict = yaml.safe_load(conf)
 
             # Print status message
-            msg.good(f'Successfully loaded configuration from {configuration}')
+            msg.good(f"Successfully loaded configuration from {configuration}")
 
     except FileNotFoundError:
 
-        raise_error(f'Could not load the file {configuration}! Check the path '
-                    f'to the file!')
+        raise_error(
+            f"Could not load the file {configuration}! Check the path " f"to the file!"
+        )
 
     # Return the dictionary
     return conf_dict
@@ -408,7 +433,7 @@ def set_filter(filters, new_filters):
     if filters is not None:
 
         # Update the filters by adding new filters to the existing ones
-        filters = (filters & new_filters)
+        filters = filters & new_filters
 
     # Othewise set the new filters as filters
     else:
@@ -432,11 +457,11 @@ def status_change(pool: Pool) -> None:
     """
     if pool.is_closed:
 
-        msg.info(f'Closed pool with ID {pool.id}')
+        msg.info(f"Closed pool with ID {pool.id}")
 
     if pool.is_open:
 
-        msg.info(f'Opened pool with ID {pool.id}')
+        msg.info(f"Opened pool with ID {pool.id}")
 
 
 def create_metrics(task_sequence) -> MetricCollector:
@@ -457,12 +482,14 @@ def create_metrics(task_sequence) -> MetricCollector:
     for task in task_sequence.sequence:
 
         # Skip exam pools, because they run infinitely
-        if hasattr(task, 'pool') and not task.exam:
+        if hasattr(task, "pool") and not task.exam:
 
             # Create metric for percentage
-            p_metric = metrics.pool_metrics.PoolCompletedPercentage(pool_id=task.pool.id,
-                                                                    percents_name=f'{task.name}-pct',
-                                                                    toloka_client=task_sequence.client)
+            p_metric = metrics.pool_metrics.PoolCompletedPercentage(
+                pool_id=task.pool.id,
+                percents_name=f"{task.name}-pct",
+                toloka_client=task_sequence.client,
+            )
 
             # Append to the placeholder list
             p_metrics.append(p_metric)
@@ -515,7 +542,7 @@ def create_pool_table(task_sequence: list) -> None:
     """
 
     # Set up headers and a placeholder for data
-    header = ('Name', 'Input', 'Output', 'Pool ID', 'Project ID', 'Pool type')
+    header = ("Name", "Input", "Output", "Pool ID", "Project ID", "Pool type")
     data = []
 
     # Loop over the tasks
@@ -527,12 +554,26 @@ def create_pool_table(task_sequence: list) -> None:
             if task.training:
 
                 # Collect input and output data from the configuration
-                inputs = [f'{k} ({v})' for k, v in task.conf['training']['data']['input'].items()]
-                outputs = [f'{k} ({v})' for k, v in task.conf['training']['data']['output'].items()]
+                inputs = [
+                    f"{k} ({v})"
+                    for k, v in task.conf["training"]["data"]["input"].items()
+                ]
+                outputs = [
+                    f"{k} ({v})"
+                    for k, v in task.conf["training"]["data"]["output"].items()
+                ]
 
                 # Append data as a tuple to the list
-                data.append((task.name, ', '.join(inputs), ', '.join(outputs), task.training.id,
-                             task.training.project_id, 'Training'))
+                data.append(
+                    (
+                        task.name,
+                        ", ".join(inputs),
+                        ", ".join(outputs),
+                        task.training.id,
+                        task.training.project_id,
+                        "Training",
+                    )
+                )
 
         except AttributeError:
 
@@ -542,23 +583,31 @@ def create_pool_table(task_sequence: list) -> None:
 
             if task.pool:
 
-                obj_type = 'Pool' if not task.exam else 'Exam'
+                obj_type = "Pool" if not task.exam else "Exam"
 
                 # Collect input and output data from the configuration
-                inputs = [f'{k} ({v})' for k, v in task.conf['data']['input'].items()]
-                outputs = [f'{k} ({v})' for k, v in task.conf['data']['output'].items()]
+                inputs = [f"{k} ({v})" for k, v in task.conf["data"]["input"].items()]
+                outputs = [f"{k} ({v})" for k, v in task.conf["data"]["output"].items()]
 
                 # Append data as a tuple to the list
-                data.append((task.name, ', '.join(inputs), ', '.join(outputs), task.pool.id,
-                             task.project.id, obj_type))
+                data.append(
+                    (
+                        task.name,
+                        ", ".join(inputs),
+                        ", ".join(outputs),
+                        task.pool.id,
+                        task.project.id,
+                        obj_type,
+                    )
+                )
 
         except AttributeError:
 
             # If task.pool raises an attribute error, the object is an action
-            obj_type = 'Action'
+            obj_type = "Action"
 
             # Append data as a tuple to the list
-            data.append((task.name, '--', '--', '--', '--', obj_type))
+            data.append((task.name, "--", "--", "--", "--", obj_type))
 
     # Print a table with inputs and outputs
     msg.table(data=data, header=header, divider=True)
@@ -577,13 +626,13 @@ def verify_connections(task_sequence: list) -> None:
     for task in task_sequence:
 
         # Check if actions have been defined in the configuration
-        if 'actions' in task.conf.keys() and task.conf['actions'] is not None:
+        if "actions" in task.conf.keys() and task.conf["actions"] is not None:
 
             # Check if the next task has been defined in the configuration
             try:
 
                 # Fetch a list of tasks defined in the actions
-                tasks = list(task.conf['actions'].values())
+                tasks = list(task.conf["actions"].values())
 
                 # Check that the task exists in the task sequence
                 for next_task in tasks:
@@ -595,28 +644,35 @@ def verify_connections(task_sequence: list) -> None:
 
                             if n_task not in [task.name for task in task_sequence]:
 
-                                raise_error(f'Cannot find a task named {n_task} in the task sequence. '
-                                            f'Please check the name of the task under the key '
-                                            f'"actions" in the configuration file.')
+                                raise_error(
+                                    f"Cannot find a task named {n_task} in the task sequence. "
+                                    f"Please check the name of the task under the key "
+                                    f'"actions" in the configuration file.'
+                                )
 
                     elif next_task not in [task.name for task in task_sequence]:
 
-                        raise_error(f'Cannot find a task named {next_task} in the task sequence. '
-                                    f'Please check the name of the task under the key '
-                                    f'"actions/next" in the configuration file.')
+                        raise_error(
+                            f"Cannot find a task named {next_task} in the task sequence. "
+                            f"Please check the name of the task under the key "
+                            f'"actions/next" in the configuration file.'
+                        )
 
             except KeyError:
 
                 pass
-        
+
         # Check if source pool is configured to current action
-        if 'source' in task.conf.keys() and task.conf['source'] is not None:
+        if "source" in task.conf.keys() and task.conf["source"] is not None:
 
-            if task.conf['source'] not in [task.name for task in task_sequence]:
+            if task.conf["source"] not in [task.name for task in task_sequence]:
 
-                raise_error(f'Cannot find a task named {task.conf["source"]} in the task sequence. '
-                            f'Please check the name of the task under the key '
-                            f'"source" in the configuration file.')
+                raise_error(
+                    f'Cannot find a task named {task.conf["source"]} in the task sequence. '
+                    f"Please check the name of the task under the key "
+                    f'"source" in the configuration file.'
+                )
+
 
 def check_reward(time_per_suite: int, reward: Union[int, float], name: str) -> None:
     """
@@ -631,14 +687,16 @@ def check_reward(time_per_suite: int, reward: Union[int, float], name: str) -> N
         Raises a warning if the configured reward is too low and prompts the user to verify if they
         wish to proceed with the current configuration. If not, the pipeline is cancelled.
     """
-    
-    suites_per_hour = 60*60 / time_per_suite
+
+    suites_per_hour = 60 * 60 / time_per_suite
     suggested_reward = 12 / suites_per_hour
 
     if reward < suggested_reward:
-        msg.warn(f"The reward you have set per assignment for {name} does not result in a fair wage for the workers. "
-                 f"In order for the workers to receive a salary of $12 per hour, set reward_per_assignment to at least ${suggested_reward}.\n"
-                 f"Do you wish to proceed with the current configuration anyway (y/n)?")
+        msg.warn(
+            f"The reward you have set per assignment for {name} does not result in a fair wage for the workers. "
+            f"In order for the workers to receive a salary of $12 per hour, set reward_per_assignment to at least ${suggested_reward}.\n"
+            f"Do you wish to proceed with the current configuration anyway (y/n)?"
+        )
         choice = input("")
 
         if choice == "n":
@@ -648,8 +706,8 @@ def check_reward(time_per_suite: int, reward: Union[int, float], name: str) -> N
 
 # Map JSON entries to Toloka objects for input/output
 data_spec = {
-    'url': toloka.project.UrlSpec(),
-    'json': toloka.project.JsonSpec(),
-    'str': toloka.project.StringSpec(),
-    'bool': toloka.project.BooleanSpec()
+    "url": toloka.project.UrlSpec(),
+    "json": toloka.project.JsonSpec(),
+    "str": toloka.project.StringSpec(),
+    "bool": toloka.project.BooleanSpec(),
 }

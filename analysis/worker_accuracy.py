@@ -10,7 +10,7 @@ import json
 import re
 
 
-with open("utils/structures_random_100.json", "r") as f:
+with open("utils/structures_final_94.json", "r") as f:
     structures = json.load(f)
 
 
@@ -29,7 +29,7 @@ def url_to_id(x):
 
 sns.set()
 
-df1 = pd.read_csv("analysis/data/assignments_20-01-2023.tsv", sep="\t")
+df1 = pd.read_csv("analysis/data/assignments_13-01-2023.tsv", sep="\t")
 df1 = df1[["ASSIGNMENT:worker_id", "OUTPUT:result", "INPUT:image"]]
 df1 = df1.rename(
     columns={
@@ -65,7 +65,7 @@ plt.xticks(range(len(worker_accuracies)), list(worker_accuracies.keys()))
 plt.title("Worker accuracy (%)")
 plt.ylim(0, 100)
 
-plt.savefig("analysis/plots/worker_accuracy_20-01-2023.png")
+plt.savefig("analysis/pdf_plots/worker_accuracy_13-01-2023.pdf", format="pdf")
 
 print(worker_accuracies)
 print(df1)

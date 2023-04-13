@@ -10,10 +10,12 @@ sns.set()
 
 # 13.1.2023:
 
-df1 = pd.read_csv("data/assignments_13-01-2023.tsv", sep="\t")
+df1 = pd.read_csv("analysis/data/assignments_13-01-2023.tsv", sep="\t")
 df1 = df1[["ASSIGNMENT:worker_id", "OUTPUT:result"]]
 
 df1 = df1.rename(columns={"ASSIGNMENT:worker_id": "worker", "OUTPUT:result": "label"})
+df1 = df1.replace("propertyascription", "property-ascription")
+df1 = df1.replace("classascription", "class-ascription")
 
 # sns.displot(data=df1, x="label")
 
@@ -50,14 +52,15 @@ bars3 = sns.barplot(ax=ax[2], x=worker_3_counts.index, y=worker_3_counts.values)
 ax[2].set_title("Worker 3")
 bars3.set_xticklabels(bars3.get_xticklabels(), rotation=90)
 
-# plt.savefig("plots/worker_distribution_13-01-23.png")
-plt.show()
+plt.savefig("analysis/pdf_plots/worker_distribution_13-01-23.pdf")
 
 
 # 20.1.2023:
 
-df2 = pd.read_csv("data/assignments_20-01-2023.tsv", sep="\t")
+df2 = pd.read_csv("analysis/data/assignments_20-01-2023.tsv", sep="\t")
 df2 = df2[["ASSIGNMENT:worker_id", "OUTPUT:result"]]
+df2 = df2.replace("propertyascription", "property-ascription")
+df2 = df2.replace("classascription", "class-ascription")
 
 df2 = df2.rename(columns={"ASSIGNMENT:worker_id": "worker", "OUTPUT:result": "label"})
 df2 = df2.astype({"label": "category"})
@@ -110,6 +113,5 @@ bars5.set_xticklabels(bars5.get_xticklabels(), rotation=90)
 
 fig.set_size_inches(10, 5)
 plt.savefig(
-    "plots/worker_distribution_20-01-23.png",
+    "analysis/pdf_plots/worker_distribution_20-01-23.pdf",
 )
-plt.show()
